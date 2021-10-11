@@ -15,6 +15,9 @@
   .footer
     &-container
       margin: auto
+  .coin
+    width: 78%
+    justify-content: space-between
 @media (max-width: 1430px)
   .container
     width: 1117px
@@ -53,6 +56,12 @@
   .banner
     &-wrapper
       padding: 59px 82px 45px 31px
+  .coin
+    flex-wrap: wrap
+    justify-content: flex-start
+    width: 57%
+    &-field
+      order: -1
 @media (max-width: 1270px)
   .container
     width: 92%
@@ -151,6 +160,13 @@
   .banner
     &-wrapper
       padding: 34px 144px 34px 31px
+  .hit
+    &:nth-child(n+5)
+      display: none
+    &:nth-child(n+4)
+      &::after
+        display: none
+        width: 0
 @media (max-width: 1024px)
   .main
     &-container
@@ -179,6 +195,38 @@
     margin-bottom: 10px
   .swiper
     max-width: calc( 82vw + 2px )
+  .notification
+    bottom: 130px
+    padding: 14px 17px
+    width: 289px
+    &__title
+      margin-bottom: 10px
+      font-size: 12px
+      line-height: 15px
+    &__text
+      font-size: 10px
+      line-height: 13px
+  .coin
+    margin-bottom: 22px
+    width: 100%
+    &-field
+      width: 100%
+      &__one
+        margin-bottom: 30px
+  .bet
+    width: 100%
+    &-money
+      &__wrapper
+        justify-content: space-between
+      &__plus
+        flex-basis: 30%
+  .hit
+    &:nth-child(n+5)
+      display: flex
+    &:nth-child(n+4)
+      &::after
+        display: block
+        width: 8px
 @media (max-width: 768px)
   body
     display: block
@@ -208,13 +256,7 @@
       bottom: 0
       right: 0
       background-color: #182243
-      &::after
-        content: ''
-        width: 100%
-        left: 0
-        top: 140px
-        position: absolute
-        border: 1px solid #2F3D68
+        
     &-container
       flex-direction: column
       position: relative
@@ -235,6 +277,31 @@
         right: 0
         z-index: 10
         background-color: rgba(18, 30, 58, 0.73)
+    &-buttons-registr
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 28px
+      &::after
+        content: ''
+        width: calc(100% + 28*2px)
+        left: -28px
+        top: 140px
+        position: absolute
+        border: 1px solid #2F3D68
+    &-info-account
+      flex-direction: column
+      align-items: flex-start
+      &__account
+        order: -1
+        margin-bottom: 31px
+      &::after
+        content: ''
+        position: absolute
+        top: 53px
+        left: -28px
+        width: calc(100% + 2*28px)
+        height: 2px
+        background-color: #2F3D6B
   .lang
     &-button
       display: none
@@ -303,8 +370,8 @@
         line-height: 16px
         color: #6279b1
         &--active
-          border: none
           background-color: transparent
+          border: 2px solid transparent
           color: #fff
         &:not(:last-child)
           margin-right: 20px
@@ -389,6 +456,10 @@
     z-index: 102
     margin-bottom: 0
     &-open
+      display: block
+      width: calc(100% + 11%)
+      margin-left: -7%
+      padding-left: 5px
       &-button
         display: block
         text-align: left
@@ -635,3 +706,32 @@
       padding: 7px 18px
       font-size: 5px
       line-height: 6px
+  .coin
+    gap: 25px
+    &-field
+      padding-top: 47px
+      &__img
+        width: 155px
+        height: 155px
+      &__one
+        width: 320px
+        height: 320px
+      &__two
+        width: 255px
+        height: 255px
+      &__info
+        width: 197px
+        z-index: 2
+        &-left
+          left: 70px
+          top: 3px
+        &-right
+          left: -111px 
+          top: 153px
+  .hit
+    &:nth-child(n+4)
+      display: none
+    &:nth-child(n+3)
+      &::after
+        display: none
+      

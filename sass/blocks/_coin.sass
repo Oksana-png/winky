@@ -1,0 +1,169 @@
+.bet
+  &-coin
+    &__buttons
+      border-radius: 8.15px
+      overflow: hidden
+      display: flex
+      align-items: center
+
+    &__button
+      padding: 17px
+      flex-basis: 50%
+      border: none
+      font-weight: 500
+      font-size: 14px
+      line-height: 18px
+      color: #FFFFFF
+      background: linear-gradient(90deg, rgba(0, 198, 251, 0.2) 0%, rgba(0, 91, 234, 0.2) 100%)
+      &--active
+        background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%)
+  &__title
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    color: #6279B1
+    margin-bottom: 10px
+  &-money
+    margin-bottom: 16px
+    &__now
+      background: #314073
+      border-radius: 4px 4px 0px 0px
+      font-weight: 500
+      font-size: 11px
+      line-height: 14px
+      color: #FFFFFF
+      padding: 7px 15px
+      display: flex
+      align-items: center
+      justify-content: center
+    &__wrapper
+      background: #1A254E
+      border-radius: 0px 0px 4px 4px
+      display: flex
+      align-items: center
+    &__plus
+      background-color: transparent
+      border: none
+      font-weight: 500
+      font-size: 11px
+      line-height: 14px
+      color: #D7D7D7
+      padding: 7px
+.coin
+  display: flex
+  gap: 30px
+  & .bet
+    max-height: 400px
+    &-button
+      margin-bottom: 21px
+  &-field
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__currency
+      position: relative
+    &__one
+      background: rgba(19, 29, 63, 0.28)
+      width: 286px
+      height: 286px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-bottom: 54px
+    &__two
+      background: rgba(19, 29, 63, 0.6)
+      width: 222px
+      height: 222px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 25px
+    &__info
+      background: rgba(67, 66, 83, 0.5)
+      backdrop-filter: blur(7px)
+      border-radius: 8px
+      padding: 12px 25px
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 171px
+      max-height: 108px
+      &-left
+        right: 0
+      &-right
+        left: 0
+    &__title
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+      color: #FFFFFF
+    &__ratio
+      font-weight: bold
+      font-size: 47px
+      line-height: 44px
+      color: #FFE03C
+    &__value
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      color: #FFFFFF
+    &__hits
+      display: flex
+      align-items: center
+.hit
+  width: 76px
+  border: 1.86364px solid rgba(86, 83, 208, 0.29)
+  border-radius: 6.52273px
+  padding: 8px 10px 5px 10px
+  position: relative
+  display: flex
+  flex-direction: column
+  &:not(:last-child)
+    margin-right: 15px
+  &:not(:last-child)::after
+    content: ''
+    position: absolute
+    right: -13px
+    background-image: url(../image/hit-arrow-2.svg)
+    background-repeat: no-repeat
+    z-index: 10
+    height: 16px
+    width: 8px
+    top: 50%
+    transform: translateY(-50%)
+  &--active
+    background: rgba(26, 233, 109, 0.31)
+    border: 1.9px solid rgba(134, 255, 91, 0.29)
+    &.hit
+      &:not(:last-child)::after
+        content: ''
+        position: absolute
+        right: -13px
+        background-image: url(../image/hit-arrow.svg)
+        background-repeat: no-repeat
+        z-index: 10
+        height: 16px
+        width: 8px
+        top: 50%
+        transform: translateY(-50%)
+  &--next
+    background: #192157
+    border: 1.86364px solid rgba(86, 83, 208, 0.29)
+  &__title
+    font-weight: 500
+    font-size: 7px
+    line-height: 9px
+    color: #6279B1
+    margin-bottom: 11px
+  &__value
+    font-weight: 500
+    font-size: 11px
+    line-height: 13px
+    color: #FFFFFF

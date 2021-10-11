@@ -1,4 +1,5 @@
 .main
+  display: none
   width: 76%
   &-play
     & svg
@@ -301,3 +302,25 @@
     left: 0
     & use
       width: 100%
+.notification
+  display: none
+  position: fixed
+  right: 0
+  bottom: 170px
+  padding: 22px 27px
+  background: linear-gradient(90deg, #111F4B 0%, rgba(17, 31, 75, 0.42) 67.71%, rgba(17, 31, 75, 0) 100%)
+  border-radius: 8px 0px 0px 8px
+  width: 451px
+  z-index: 100
+  &__title
+    margin-bottom: 16px
+    font-weight: 500
+    font-size: 19px
+    line-height: 24px
+    color: rgba(255, 255, 255, 0.65)
+  &__text
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: #FFFFFF

@@ -39,8 +39,30 @@
               </svg>
             </a>
           </div>
-          <button class="entrance">вход</button>
-          <button class="registration">регистрация</button>
+          <div class="header-info-account">
+            <div class="header-info-account__balance">
+              <div class="header-info-account__group">
+                <span class="header-info-account__text">BALANCE</span>
+                <b class="header-info-account__money">25.000 ₽</b>
+              </div>
+              <button class="header-info-account__button">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#plus"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="header-info-account__account">
+              <img src="image/image-2.png" alt="Purple" class="header-info-account__avatar">
+              <span class="header-info-account__name">Purple</span>
+              <button class="header-info-account__exit">
+                <img src="image/exit-2.png" alt="exit" class="header-info-account__img">
+              </button>
+            </div>
+          </div>
+          <div class="header-buttons-registr">
+            <button class="entrance">вход</button>
+            <button class="registration">регистрация</button>
+          </div>
           <div class="profile-nav profile-nav-mobile">
             <ul class="profile-nav__list">
               <li data-nav="account" class="profile-nav__item profile-nav__item--active">
@@ -93,7 +115,7 @@
       <a href="#" class="logo">WINKY</a>
       <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item">
+            <li class="menu__item menu__item--active">
               <a href="#" class="menu__link">
                 <div class="menu__link-button">
                   <svg class="menu__icon">
@@ -112,7 +134,7 @@
                 <span class="menu__link-text">Мины</span>
               </a>
             </li>
-            <li class="menu__item menu__item--active">
+            <li class="menu__item">
               <a href="#" class="menu__link">
                 <div class="menu__link-button">
                   <img src="image/icons/coin.png" alt="coin" class="nav__icon">
@@ -147,7 +169,6 @@
   <main class="content">
     <div class="container main-container">
       <div class="main">
-
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -183,7 +204,6 @@
           </div>
           <div class="pagination"></div>
         </div>
-        
         <div class="main-play">
           <h3 class="main-play__title">Наши игры</h3>
           <div class="main-play__wrapper">
@@ -267,6 +287,84 @@
               <img src="image/soon-large.png" alt="soon" class="main-play__item-img main-play__item-img--soon">
               <img src="image/soon-ligth.png" alt="soon" class="main-play__item-img main-play__item-img--soont">
             </a>
+          </div>
+        </div>
+      </div>
+      <div class="coin">
+        <div class="bet">
+          <h4 class="bet__title">Сумма ставки</h4>
+          <div class="bet-money">
+            <div class="bet-money__now">0.99₽</div>
+            <div class="bet-money__wrapper">
+              <button class="bet-money__plus">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#close"></use>
+                </svg>
+              </button>
+              <button class="bet-money__plus">+0.5</button>
+              <button class="bet-money__plus">+1.0</button>
+              <button class="bet-money__plus">+1.5</button>
+              <button class="bet-money__plus">+2.0</button>
+              <button class="bet-money__plus">+2.5</button>
+              <button class="bet-money__plus">Все</button>
+            </div>
+          </div>
+          <button class="bet-button">Сделать ставку</button>
+          <div class="bet-coin__buttons">
+            <button class="bet-coin__button bet-coin__button--active">Орел</button>
+            <button class="bet-coin__button">Решка</button>
+          </div>
+        </div>
+        <div class="coin-field">
+          <div class="coin-field__one">
+            <div class="coin-field__two">
+              <div class="coin-field__currency">
+                <img src="image/token-1.png" alt="token-1" class="coin-field__img">
+                <div class="coin-field__info coin-field__info-left">
+                  <span class="coin-field__title">Вы выйграли!</span>
+                  <span class="coin-field__ratio">x1.58</span>
+                  <span class="coin-field__value">+9,99₽</span>
+                </div>
+              </div>
+              <div class="coin-field__currency ">
+                <img src="image/token-2.png" alt="token-2" class="coin-field__img">
+                <div class="coin-field__info coin-field__info-right">
+                  <span class="coin-field__title">Вы проиграли!</span>
+                  <span class="coin-field__ratio">x1.58</span>
+                  <span class="coin-field__value">+0,00₽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coin-field__hits hits">
+            <div class="hit hit--active">
+              <span class="hit__title">1 hit</span>
+              <span class="hit__value">x1.58</span>
+            </div>
+            <div class="hit hit--next">
+              <span class="hit__title">1 hit</span>
+              <span class="hit__value">x1.58</span>
+            </div>
+            <div class="hit">
+              <span class="hit__title">1 hit</span>
+              <span class="hit__value">x1.58</span>
+            </div>
+            <div class="hit">
+              <span class="hit__title">1 hit</span>
+              <span class="hit__value">x1.58</span>
+            </div>
+            <div class="hit">
+              <span class="hit__title">1 hit</span>
+              <span class="hit__value">x1.58</span>
+            </div>
+            <div class="hit">
+              <span class="hit__title">1 hit</span>
+              <span class="hit__value">x1.58</span>
+            </div>
+            <div class="hit">
+              <span class="hit__title">1 hit</span>
+              <span class="hit__value">x1.58</span>
+            </div>
           </div>
         </div>
       </div>
@@ -704,7 +802,10 @@
         </ul>
       </div>
     </div>
-    
   </footer>
+  <div class="notification">
+    <h4 class="notification__title">Пополнение</h4>
+    <span class="notification__text">Ваш счет пополнен на 1.500₽</span>
+  </div>
 </body>
 </html>
