@@ -1,0 +1,303 @@
+.main
+  width: 76%
+  &-play
+    & svg
+      width: 100%
+    &__wrapper
+      display: grid
+      justify-content: space-between
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr))
+      grid-template-rows: 1fr 1fr 1fr
+      grid-auto-flow: row danse
+      gap: 30px
+    &__title
+      font-family: TT Interfaces
+      font-weight: normal
+      font-size: 17px
+      line-height: 21px
+      color: #FFFFFF
+      margin-bottom: 48px
+    &__item
+      background: #001B4F
+      border-radius: 7px
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      z-index: 1
+      &-wrapper
+        padding: 48px 46px
+        border-radius: 7px
+        position: relative
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: hidden
+        display: flex
+        justify-content: center
+      &-mine
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: -1
+      &-img
+        position: absolute
+        &--mine
+          z-index: 2
+          bottom: -13px
+          left: -10px
+        &--minet
+          width: 46px
+          height: 46px
+          z-index: 1
+          top: -14px
+          right: 0
+        &--coin
+          z-index: 1
+          bottom: -23px
+          left: -13px
+        &--coint
+          width: 91px
+          height: 77px
+          z-index: 1
+          top: -23px
+          right: -6px
+        &--wheel
+          bottom: -43px
+          left: -38px
+          z-index: 1
+        &--wheelt
+          top: -20px
+          right: -20px
+          z-index: 1
+        &--cube
+          bottom: -6px
+          left: -7px
+          z-index: 1
+        &--cubet
+          top: -3px
+          right: -6px
+          width: 43px
+          height: 43px
+          z-index: 1
+        &--soon
+          bottom: -6px
+          left: -14px
+          z-index: 1
+        &--soont
+          top: -15px
+          right: -24px
+          z-index: 1
+    &__blur
+      width: 110px
+      height: 110px
+      background: #012355
+      filter: blur(50px)
+      position: absolute
+      z-index: 1
+      bottom: -50px
+      left: -15px
+      &-purpur
+        width: 110px
+        height: 110px
+        background: #012355
+        filter: blur(50px)
+        position: absolute
+        right: -15px
+        top: -60px
+        background: #9E20A0
+        filter: blur(75px)
+        &-cube
+          right: auto
+          top: auto
+          bottom: -45px
+          left: -24px
+      &--cube
+        background: rgba(255, 209, 120, 0.72)
+        filter: blur(90px)
+        bottom: auto
+        left: auto
+        top: -42px
+        right: -25px
+      &--coin
+        background: #8FAE11
+        filter: blur(80px)
+        bottom: -88px
+        z-index: 1
+      &--coint
+        background: rgba(171, 255, 120, 0.72)
+        filter: blur(100px)
+        z-index: 1
+      &--wheel
+        background: #AE1166
+        filter: blur(80px)
+        &-two
+          background: rgba(220, 255, 120, 0.72)
+          filter: blur(100px)
+      &--soon
+        background: #11AE63
+        filter: blur(90px)
+      &--soont
+        background: rgba(120, 231, 255, 0.72)
+        filter: blur(80px)
+    &__img
+      &-coin
+        position: absolute
+        bottom: 0
+        right: 0
+        z-index: 1
+        &-two
+          position: absolute
+          top: -40px
+          left: -21px
+          z-index: 1
+      &-wheel
+        position: absolute
+        width: 37px
+        height: 26px
+        bottom: 18px
+        right: 65px
+        &-two
+          position: absolute
+          width: 46px
+          height: 32px
+          top: 24px
+          left: 62px
+      &-cube
+        width: 27px
+        height: 27px
+        bottom: 29px
+        right: 76px
+      &-cubet
+        width: 14px
+        height: 14px
+        top: 38px
+        left: 106px
+    &__link
+      position: relative
+    &__text
+      max-width: 140px
+      text-decoration: none
+      position: relative
+      z-index: 5
+      background: rgba(24, 68, 226, 0.5)
+      padding: 9px 17px
+      box-shadow: 0px 2.95px 2.95px rgba(6, 15, 58, 0.25)
+      border-radius: 3.7px
+      font-family: TT Interfaces
+      font-style: normal
+      font-weight: 600
+      font-size: 25.8801px
+      line-height: 32px
+      color: #FFFFFF
+      display: inline-block
+  &-slider
+    // width: 100%
+    // height: 308px
+.slick-arrow
+  display: none
+.swiper
+  max-width: calc(69vw + 2px)
+  height: 370px
+  margin-top: -30px
+  & .wheel
+    width: calc( 100% - 4px )
+    margin-left: auto
+    margin-right: auto
+    display: block
+    padding: 0
+    margin-bottom: 0
+    margin-top: 30px
+    max-height: 308px
+    &__wrapper
+      padding: 47px 63px
+  & .banner
+    width: calc( 100% - 4px )
+.pagination
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  bottom: 5px
+
+  &-elem
+    background: rgba(13, 30, 68, 0.29)
+    width: 13px
+    height: 13px
+    border-radius: 50%
+    &:not(:last-child)
+      margin-right: 10px
+    &-active
+      background: #0D1E44
+
+.banner
+  width: calc(100% - 2px)
+  margin: auto
+  margin-top: 30px
+  background: #314BB6
+  border-radius: 7px
+  position: relative
+  &-wrapper
+    border-radius: 7px
+    overflow: hidden
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))
+    padding: 59px 82px 45px 82px
+    position: relative
+    &::after
+      content: ''
+      background: #6461EB
+      filter: blur(105px)
+      width: 221px
+      height: 221px
+      position: absolute
+      top: -66px
+      left: -59px
+  &__title
+    font-family: TT Interfaces
+    margin-bottom: 20px
+    font-weight: bold
+    font-size: 40px
+    line-height: 51px
+    color: #FFFFFF
+    position: relative
+    z-index: 1
+  &__description
+    margin-bottom: 57px
+    font-family: TT Interfaces
+    font-style: normal
+    font-weight: 500
+    font-size: 17px
+    line-height: 21px
+    color: #FFFFFF
+    opacity: 0.7
+    position: relative
+    z-index: 1
+  &__link
+    font-family: TT Interfaces
+    background: rgba(74, 79, 198, 0.51)
+    backdrop-filter: blur(4px)
+    border-radius: 5px
+    padding: 20px 50px
+    font-weight: 500
+    font-size: 12.4972px
+    line-height: 15px
+    color: #FFFFFF
+    text-decoration: none
+    display: inline-block
+    position: relative
+    z-index: 1
+  &__img
+    position: absolute
+    width: 351px
+    height: 350px
+    top: -35px
+    right: 0
+  &__background
+    width: 100%
+    position: absolute
+    bottom: -16px
+    left: 0
+    & use
+      width: 100%

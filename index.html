@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <title>WINKY</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="container header-container">
+        <button class="header__button lang-button">
+          <img src="image/lang-ru.png" alt="ru" class="lang-button__img">
+          <svg class="lang-button__icon">
+            <use xlink:href="image/svg.svg#arrow-down"></use>
+          </svg>
+        </button>
+        <div class="header-right">
+          <div class="header__social">
+            <a href="#" class="header__social-link">
+              <svg class="header__social-icon">
+                <use xlink:href="image/svg.svg#telegram-icon"></use>
+              </svg>
+            </a>
+            <a href="#" class="header__social-link">
+              <svg class="header__social-icon">
+                <use xlink:href="image/svg.svg#telegram-icon"></use>
+              </svg>
+            </a>
+            <a href="#" class="header__social-link">
+              <svg class="header__social-icon">
+                <use xlink:href="image/svg.svg#telegram-icon"></use>
+              </svg>
+            </a>
+          </div>
+          <button class="entrance">вход</button>
+          <button class="registration">регистрация</button>
+          <div class="profile-nav profile-nav-mobile">
+            <ul class="profile-nav__list">
+              <li data-nav="account" class="profile-nav__item profile-nav__item--active">
+                <a href="#" class="profile-nav__link">
+                  Мой профиль
+                </a>
+              </li>
+              <li data-nav="history" class="profile-nav__item">
+                <a href="#" class="profile-nav__link">
+                  История
+                </a>
+              </li>
+              <li data-nav="safety" class="profile-nav__item">
+                <a href="#" class="profile-nav__link">
+                  Безопасность
+                </a>
+              </li>
+              <li data-nav="referral-program" class="profile-nav__item">
+                <a href="#" class="profile-nav__link">
+                  Реферальная программа
+                </a>
+              </li>
+              <li data-nav="exit" class="profile-nav__item">
+                <a href="#" class="profile-nav__link">
+                  Выйти
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-shadow-mobile"></div>
+  </header>
+  <div class="nav-mobile">
+    <button class="nav-button-mobile button-open-nav">
+      <svg class="icon">
+        <use xlink:href="image/svg.svg#burger"></use>
+      </svg>
+    </button>
+    <a href="#" class="logo-mobile">WINKY</a>
+    <button class="nav-button-mobile button-open-account">
+      <svg class="icon">
+        <use xlink:href="image/svg.svg#user"></use>
+      </svg>
+    </button>
+  </div>
+  <nav class="nav">
+    <div class="nav-wrapper">
+      <a href="#" class="logo">WINKY</a>
+      <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <div class="menu__link-button">
+                  <svg class="menu__icon">
+                    <use xlink:href="image/svg.svg#home"></use>
+                  </svg>
+                </div>
+                <span class="menu__link-text">Домой</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <div class="menu__link-button">
+                  <img src="image/icons/mine.png" alt="mine" class="nav__icon">
+                  <img src="image/icons/mine-active.png" alt="mine" class="nav__icon-active">
+                </div>
+                <span class="menu__link-text">Мины</span>
+              </a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a href="#" class="menu__link">
+                <div class="menu__link-button">
+                  <img src="image/icons/coin.png" alt="coin" class="nav__icon">
+                  <img src="image/icons/coin-active.png" alt="coin" class="nav__icon-active">
+                </div>
+                <span class="menu__link-text">Монетка</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <div class="menu__link-button">
+                  <img src="image/icons/wheel.png" alt="wheel" class="nav__icon">
+                  <img src="image/icons/wheel-active.png" alt="wheel" class="nav__icon-active">
+                </div>
+                <span class="menu__link-text">Колесо</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <div class="menu__link-button">
+                  <img src="image/icons/cube.png" alt="cube" class="nav__icon">
+                  <img src="image/icons/cube-active.png" alt="cube" class="nav__icon-active">
+                </div>
+                <span class="menu__link-text">Дайс</span>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-shadow-mobile"></div>
+  </nav>
+  <main class="content">
+    <div class="container main-container">
+      <div class="main">
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="banner">
+                <div class="banner-wrapper">
+                  <h3 class="banner__title">Играй и получай деньги!</h3>
+                  <p class="banner__description">Моментальный вывод и депозит без комиссии RTP 99%</p>
+                  <a href="#" class="banner__link">Пополнить</a>
+                  <img src="image/background-banner.svg" alt="background" class="banner__background">
+                </div>
+                <img src="image/image-banner.png" alt="pharaoh" class="banner__img">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="wheel">
+                <div class="wheel__wrapper">
+                  <h2 class="wheel__title">Крути колесо и забирай свой ежедневный приз!</h2>
+                  <p class="wheel__description">Крутить бонусное колесо можно только один раз в 24 часа!</p>
+                  <button class="wheel__button">Крутить!</button>
+                  <svg class="wheel__svg">
+                    <use class="wheel__wheel" xlink:href="image/svg.svg#wheel-acc"></use>
+                  </svg>
+                  <img class="wheel__arrow" src="image/arrow-wheel.png" alt="arrow">
+                  <svg class="wheel__decord">
+                    <use xlink:href="image/svg.svg#decor-dark"></use>
+                  </svg>
+                  <svg class="wheel__decorl">
+                    <use xlink:href="image/svg.svg#decor-light"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination"></div>
+        </div>
+        
+        <div class="main-play">
+          <h3 class="main-play__title">Наши игры</h3>
+          <div class="main-play__wrapper">
+            <a href="#" class="main-play__item">
+              <div class="main-play__item-wrapper">
+                <div class="main-play__link">
+                  <span class="main-play__text">Мины</span>
+                </div>
+                <svg class="main-play__item-mine">
+                  <use xlink:href="image/svg.svg#mine-line"></use>
+                </svg>
+                <div class="main-play__blur"></div>
+                <div class="main-play__blur-purpur"></div>
+              </div>
+              <img src="image/mine-image.png" alt="mine" class="main-play__item-img main-play__item-img--mine">
+              <img src="image/mine-image.png" alt="mine" class="main-play__item-img main-play__item-img--minet">
+            </a>
+
+            <a href="#" class="main-play__item">
+              <div class="main-play__item-wrapper">
+                <div class="main-play__link">
+                  <span class="main-play__text">Монетка</span>
+                </div>
+                <svg class="main-play__item-mine">
+                  <use xlink:href="image/svg.svg#coin-vector"></use>
+                </svg>
+                <div class="main-play__blur main-play__blur--coin"></div>
+                <div class="main-play__blur main-play__blur--coint"></div>
+                <img src="image/coin-full.png" alt="coins" class="main-play__img-coin">
+                <img src="image/coin-full.png" alt="coins" class="main-play__img-coin-two">
+              </div>
+              <img src="image/coin-large.png" alt="coin" class="main-play__item-img main-play__item-img--coin">
+              <img src="image/coin-light.png" alt="coin" class="main-play__item-img main-play__item-img--coint">
+            </a>
+
+            <a href="#" class="main-play__item">
+              <div class="main-play__item-wrapper">
+                <div class="main-play__link">
+                  <span class="main-play__text">Колесо</span>
+                </div>
+                <svg class="main-play__item-mine">
+                  <use xlink:href="image/svg.svg#wheel-vector"></use>
+                </svg>
+                <div class="main-play__blur main-play__blur--wheel"></div>
+                <div class="main-play__blur main-play__blur--wheel-two"></div>
+                <img src="image/wheel-large.png" alt="wheel" class="main-play__img-wheel">
+                <img src="image/wheel-small.png" alt="wheel" class="main-play__img-wheel-two">
+              </div>
+              <img src="image/wheel-large.png" alt="wheel" class="main-play__item-img main-play__item-img--wheel">
+              <img src="image/wheel-small.png" alt="wheel" class="main-play__item-img main-play__item-img--wheelt">
+            </a>
+            <a href="#" class="main-play__item">
+              <div class="main-play__item-wrapper">
+                <div class="main-play__link">
+                  <span class="main-play__text">Дайс</span>
+                </div>
+                <svg class="main-play__item-mine">
+                  <use xlink:href="image/svg.svg#cube-vector"></use>
+                </svg>
+                <div class="main-play__blur main-play__blur--cube"></div>
+                <div class="main-play__blur-purpur main-play__blur-purpur-cube"></div>
+                <img src="image/cube-small.png" alt="cube" class="main-play__item-img main-play__img-cube">
+                <img src="image/cube-small.png" alt="cube" class="main-play__item-img main-play__img-cubet">
+              </div>
+              <img src="image/cube-large.png" alt="cube" class="main-play__item-img main-play__item-img--cube">
+              <img src="image/cube-large.png" alt="cube" class="main-play__item-img main-play__item-img--cubet">
+            </a>
+            <a href="#" class="main-play__item">
+              <div class="main-play__item-wrapper">
+                <div class="main-play__link">
+                  <span class="main-play__text">Скоро</span>
+                </div>
+                <svg class="main-play__item-mine">
+                  <use xlink:href="image/svg.svg#soon-vector"></use>
+                </svg>
+                <div class="main-play__blur main-play__blur--soon"></div>
+                <div class="main-play__blur-purpur main-play__blur main-play__blur--soont"></div>
+                <img src="image/soon-ligth.png" alt="soon" class="main-play__item-img main-play__img-cube">
+                <img src="image/soon-small.png" alt="soon" class="main-play__item-img main-play__img-cubet">
+              </div>
+              <img src="image/soon-large.png" alt="soon" class="main-play__item-img main-play__item-img--soon">
+              <img src="image/soon-ligth.png" alt="soon" class="main-play__item-img main-play__item-img--soont">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-nav">
+          <ul class="profile-nav__list">
+            <li data-nav="account" class="profile-nav__item profile-nav__item--active">
+              <a href="#" class="profile-nav__link">
+                Мой профиль
+              </a>
+            </li>
+            <li data-nav="history" class="profile-nav__item">
+              <a href="#" class="profile-nav__link">
+                История
+              </a>
+            </li>
+            <li data-nav="safety" class="profile-nav__item">
+              <a href="#" class="profile-nav__link">
+                Безопасность
+              </a>
+            </li>
+            <li data-nav="referral-program" class="profile-nav__item">
+              <a href="#" class="profile-nav__link">
+                Реферальная программа
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="profile-info">
+          <div class="profile-info__block">
+            <h2 class="profile-info__title">Аккаунт</h2>
+            <div class="profile-info__item profile-info__name">
+              <div class="profile-info__left">
+                <h4 class="profile-info__item-title">Имя пользователя</h4>
+                <span class="profile-info__item-text">Purple</span>
+              </div>
+              <button class="profile-info__button">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#pencil"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="profile-info__item profile-info__mail">
+              <div class="profile-info__left">
+                <h4 class="profile-info__item-title">Ваша почта</h4>
+                <span class="profile-info__item-text">Pu***@g***l.com</span>
+              </div>
+              <button class="profile-info__button">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#pencil"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="profile-info__item profile-info__telephone">
+              <div class="profile-info__left">
+                <h4 class="profile-info__item-title">Номер телефона</h4>
+                <span class="profile-info__item-text">+7999-***-99-**</span>
+              </div>
+              <button class="profile-info__button">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#pencil"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="profile-info__block">
+            <h2 class="profile-info__title">Социальные сети</h2>
+            <div class="profile-info__item profile-info__vk">
+              <div class="profile-info__left">
+                <h4 class="profile-info__item-title">Профиль ВКонтакте</h4>
+                <span class="profile-info__item-text">Purple Purplov</span>
+              </div>
+              <button class="profile-info__button">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#pencil"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="profile-info__item profile-info__telegram">
+              <div class="profile-info__left">
+                <h4 class="profile-info__item-title">Аккаунт Telegram</h4>
+                <span class="profile-info__item-text">Привязан</span>
+              </div>
+              <button class="profile-info__button">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#pencil"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="profile-info__item profile-info__telephone">
+              <div class="profile-info__left">
+                <h4 class="profile-info__item-title">Выйти с профиля</h4>
+                <span class="profile-info__item-text">Выход</span>
+              </div>
+              <button class="profile-info__button">
+                <img src="image/exit.png" alt="exit">
+              </button>
+            </div>
+          </div>
+          <div class="profile-info__block">
+            <h2 class="profile-info__title">Баланс</h2>
+            <div class="profile-info__item profile-info__balance">
+              <div class="profile-info__left">
+                <h4 class="profile-info__item-title">Ваш баланс</h4>
+                <span class="profile-info__item-text">25.012₽</span>
+              </div>
+              <div class="balance-group">
+                <button class="balance-history">История транзакций</button>
+                <button class="balance-deposit">Пополнить</button>
+                <button class="balance-withdraw">Вывести</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wheel wheel-acc">
+          <div class="wheel__wrapper">
+            <h2 class="wheel__title">Крути колесо и забирай свой ежедневный приз!</h2>
+            <p class="wheel__description">Крутить бонусное колесо можно только один раз в 24 часа!</p>
+            <button class="wheel__button">Крутить!</button>
+            <svg class="wheel__svg">
+              <use class="wheel__wheel" xlink:href="image/svg.svg#wheel-acc"></use>
+            </svg>
+            <img class="wheel__arrow" src="image/arrow-wheel.png" alt="arrow">
+            <svg class="wheel__decord">
+              <use xlink:href="image/svg.svg#decor-dark"></use>
+            </svg>
+            <svg class="wheel__decorl">
+              <use xlink:href="image/svg.svg#decor-light"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="referral-program">
+          <div class="referral-program__block referral-program__info">
+            <h2 class="referral-program__title">Реферальная программа</h2>
+            <div class="referral-program__item">
+              <h4 class="referral-program__item-title">Ваша реферальная ссылка</h4>
+              <a href="https://www.winky.com/?ref=2" class="referral-program__item-link">https://www.winky.com/?ref=2</a>
+            </div>
+          </div>
+          <div class="referral-program__block referral-program__balance">
+            <h2 class="referral-program__title">Статистика</h2>
+            <div class="referral-program__wrapper">
+              <div class="referral-program__item referral-program__item-small">
+                <h4 class="referral-program__item-title">Рефералов</h4>
+                <span class="referral-program__item-text">125</span>
+              </div>
+              <div class="referral-program__item referral-program__item-small">
+                <h4 class="referral-program__item-title">Заработано</h4>
+                <span class="referral-program__item-text">5.624₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="referral-program__block referral-program__kod">
+            <h2 class="referral-program__title">Ввести код</h2>
+            <form action="#" class="referral-program__item">
+              <h4 class="referral-program__item-title">Введите бонусный код</h4>
+              <input type="text" class="referral-program__item-text" value="**************">
+            </form>
+          </div>
+        </div>
+        <div class="history-play">
+          <h2 class="history-play__title">Статистика игр</h2>
+          <div class="history-play__content">
+            <div class="history-play__item">
+              <h4 class="history-play__item-title">Всего игр</h4>
+              <span class="history-play__item-text">1524</span>
+            </div>
+            <div class="history-play__item">
+              <h4 class="history-play__item-title">Выйграно</h4>
+              <span class="history-play__item-text">10.560₽</span>
+            </div>
+            <div class="history-play__item">
+              <h4 class="history-play__item-title">Проиграно</h4>
+              <span class="history-play__item-text">5.624₽</span>
+            </div>
+            <div class="history-play__item">
+              <h4 class="history-play__item-title">Сумма игр</h4>
+              <span class="history-play__item-text">16.254₽</span>
+            </div>
+            <div class="history-play__item">
+              <h4 class="history-play__item-title">Макс. коэф</h4>
+              <span class="history-play__item-text">152х</span>
+            </div>
+            <div class="history-play__item">
+              <h4 class="history-play__item-title">Макс. прибыль</h4>
+              <span class="history-play__item-text">1524₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="transactions">
+          <h2 class="transactions__title">Транзакции</h2>
+          <table class="transactions-table">
+            <tbody>
+              <tr class="transactions-table__tr-head">
+                <th class="transactions-table__head transactions-table__left">Номер</th>
+                <th class="transactions-table__head">Тип</th>
+                <th class="transactions-table__head">Сумма</th>
+                <th class="transactions-table__head">Баланс</th>
+                <th class="transactions-table__head transactions-table__right">Дата</th>
+              </tr>
+              <tr class="transactions-table__tr">
+                <td class="transactions-table__content transactions-table__left">#1</td>
+                <td class="transactions-table__content">Бонус</td>
+                <td class="transactions-table__content">150₽</td>
+                <td class="transactions-table__content">1500₽</td>
+                <td class="transactions-table__content transactions-table__right">15.09.21</td>
+              </tr>
+              <tr class="transactions-table__tr">
+                <td class="transactions-table__content transactions-table__left">#2</td>
+                <td class="transactions-table__content">Пополнение</td>
+                <td class="transactions-table__content">1000₽</td>
+                <td class="transactions-table__content">2500₽</td>
+                <td class="transactions-table__content transactions-table__right">17.09.21</td>
+              </tr>
+              <tr class="transactions-table__tr">
+                <td class="transactions-table__content transactions-table__left">#3</td>
+                <td class="transactions-table__content">Монетка</td>
+                <td class="transactions-table__content">-2000₽</td>
+                <td class="transactions-table__content">500₽</td>
+                <td class="transactions-table__content transactions-table__right">18.09.21</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="safety">
+          <form class="safety__block">
+            <h2 class="safety__title">Безопасность</h2>
+            <div class="safety__block-item">
+              <h4 class="safety__block-title">Старый пароль</h4>
+              <input type="password" class="safety__block-data" value="*******">
+            </div>
+            <div class="safety__block-item">
+              <h4 class="safety__block-title">Новый пароль</h4>
+              <input type="password" class="safety__block-data" value="*******">
+            </div>
+            <div class="safety__block-item">
+              <h4 class="safety__block-title">Подтвердите пароль</h4>
+              <input type="password" class="safety__block-data" value="*******">
+            </div>
+            <button class="safety__block-button">Изменить</button>
+          </form>
+          <div class="safety__block safety-bind">
+            <h2 class="safety__title">2-FA</h2>
+            <p class="safety__block-info">Двухфакторная аутентификация - усилинная защита вашего профиля от несанкционированного доступа При привязки аккаунта ВКонтакте или Telegram при авторизации в ваш профиль, в личные сообщения вам будет приходить одноразовый код для входа.</p>
+            <div class="safety-bind__wrapper">
+              <div class="safety-bind__item safety-bind__item-success">
+                <span class="safety-bind__item-title">ВКонтакте</span>
+                <span class="safety-bind__item-text">Привязан</span>
+              </div>
+              <div class="safety-bind__item">
+                <span class="safety-bind__item-title">Telegram</span>
+                <span class="safety-bind__item-text">Не привязан</span>
+              </div>
+            </div>
+            <button class="safety-bind__button">Включить двухфакторную аутентификацию</button>
+          </div>
+        </div>
+      </div>
+      <div class="chat">
+        <div class="chat-header">
+          <svg class="chat-header__icon">
+            <use xlink:href="image/svg.svg#chat-icon"></use>
+          </svg>
+          <span class="chat-header__title">Правила чата</span>
+        </div>
+        <div class="chat-messages">
+          <div class="chat-message">
+            <img src="image/image-1.png" alt="avata: chanel" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">chanel</span>
+              <p class="chat-message__message">Всем привет, как у вас дела ребята?</p>
+            </div>
+            <span class="chat-message__date">12:56</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-2.png" alt="avata: Purple" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">Purple</span>
+              <p class="chat-message__message">Здарова, все прекрасно, сегодня я закинул 1000 рублей и успешно смог вывести 5000 рублей!?</p>
+            </div>
+            <span class="chat-message__date">13:00</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-3.png" alt="avata: redmoon" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">redmoon</span>
+              <p class="chat-message__message">Ого ничего себе, я только со 
+                100 рублей, поднял 1000</p>
+            </div>
+            <span class="chat-message__date">13:03</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-1.png" alt="avata: chanel" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">chanel</span>
+              <p class="chat-message__message">Всем привет, как у вас дела ребята?</p>
+            </div>
+            <span class="chat-message__date">12:56</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-2.png" alt="avata: Purple" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">Purple</span>
+              <p class="chat-message__message">Здарова, все прекрасно, сегодня я закинул 1000 рублей и успешно смог вывести 5000 рублей!?</p>
+            </div>
+            <span class="chat-message__date">13:00</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-3.png" alt="avata: redmoon" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">redmoon</span>
+              <p class="chat-message__message">Ого ничего себе, я только со 
+                100 рублей, поднял 1000</p>
+            </div>
+            <span class="chat-message__date">13:03</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-1.png" alt="avata: chanel" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">chanel</span>
+              <p class="chat-message__message">Всем привет, как у вас дела ребята?</p>
+            </div>
+            <span class="chat-message__date">12:56</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-2.png" alt="avata: Purple" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">Purple</span>
+              <p class="chat-message__message">Здарова, все прекрасно, сегодня я закинул 1000 рублей и успешно смог вывести 5000 рублей!?</p>
+            </div>
+            <span class="chat-message__date">13:00</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-3.png" alt="avata: redmoon" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">redmoon</span>
+              <p class="chat-message__message">Ого ничего себе, я только со 
+                100 рублей, поднял 1000</p>
+            </div>
+            <span class="chat-message__date">13:03</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-2.png" alt="avata: Purple" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">Purple</span>
+              <p class="chat-message__message">Здарова, все прекрасно, сегодня я закинул 1000 рублей и успешно смог вывести 5000 рублей!?</p>
+            </div>
+            <span class="chat-message__date">13:00</span>
+          </div>
+          <div class="chat-message">
+            <img src="image/image-3.png" alt="avata: redmoon" class="chat-message__avatar">
+            <div class="chat-message__text">
+              <span class="chat-message__name">redmoon</span>
+              <p class="chat-message__message">Ого ничего себе, я только со 
+                100 рублей, поднял 1000</p>
+            </div>
+            <span class="chat-message__date">13:03</span>
+          </div>
+        </div>
+        <div class="blur">
+          <button class="chat-scroll">
+            <svg class="chat-scroll__icon">
+              <use xlink:href="image/svg.svg#arrow-chat"></use>
+            </svg>
+          </button>
+        </div>
+        <form action="#" class="chat-form">
+          <input type="text" class="chat-input" placeholder="Ваше сообщение">
+          <button class="chat-submit">
+            <svg class="chat-submit__icon">
+              <use xlink:href="image/svg.svg#chat"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <button class="chat-open-button">
+    <span class="footer-container">Открыть чат</span>
+    </button>
+  <footer class="footer">
+    <div class="footer-container">
+      <img src="image/oval.png" alt="decore: ovals" class="footer__decor">
+      <div class="footer-block">
+        <h3 class="footer-block__title">Winky 2021</h3>
+        <ul class="footer-block__list">
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Мины</a>
+          </li>
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Монетка</a>
+          </li>
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Колесо</a>
+          </li>
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Дайс</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h3 class="footer-block__title">Кошелек</h3>
+        <ul class="footer-block__list">
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Пополнить баланс</a>
+          </li>
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Вывести средства</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h3 class="footer-block__title">Аккаунт</h3>
+        <ul class="footer-block__list">
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Профиль</a>
+          </li>
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Выйти</a>
+          </li> 
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h3 class="footer-block__title">О нас</h3>
+        <ul class="footer-block__list">
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Политика конфеденциальности</a>
+          </li>
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Пользовательское соглашение</a>
+          </li>
+          <li class="footer-block__item">
+            <a href="#" class="footer-block__link">Партнерская программа</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+</html>

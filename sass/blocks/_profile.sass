@@ -1,0 +1,552 @@
+.main
+  &-container
+    display: flex
+    justify-content: space-between
+.profile
+  display: none
+  width: 76%
+  &-nav
+    background: #0A1633
+    border-radius: 8px
+    padding: 13px 16px 12px 16px
+    margin-bottom: 10px
+    &__list
+      display: flex
+      align-items: center
+      list-style: none
+    &__link
+      display: block
+      text-decoration: none
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      padding: 22px 18px
+      color: inherit
+    &__item
+      color: #6279B1
+      border: 2px solid transparent
+      &--active
+        color: #FFFFFF
+        background: #192157
+        border: 2px solid #2B2F7A
+        box-sizing: border-box
+        border-radius: 7px
+    &-mobile
+      display: none
+  &-info
+    display: none //flex
+    justify-content: space-between
+    background: #0A1633
+    border-radius: 8px
+    padding: 29px 38px 31px 36px
+    margin-bottom: 12px
+    &__title
+      font-weight: 500
+      font-size: 19px
+      line-height: 24px
+      color: #FFFFFF
+      margin: 0
+      margin-bottom: 32px
+    &__item
+      display: flex
+      justify-content: space-between
+      background: #080F29
+      border-radius: 7.43698px
+      padding: 15px 20px 15px 20px
+      width: 277px
+      &:not(:last-child)
+        margin-bottom: 9px
+      &-title
+        font-weight: 500
+        font-size: 9.56182px
+        line-height: 12px
+        color: rgba(255, 255, 255, 0.5)
+        margin: 0
+        margin-bottom: 3px
+      &-text
+        font-weight: bold
+        font-size: 13.8115px
+        line-height: 17px
+        color: #FFFFFF
+    &__button
+      padding-left: 10px
+      border: none
+      background-color: transparent
+    &__balance
+      display: flex
+      flex-direction: column
+      height: 211px
+    &__block
+      &:not(:last-child)
+        margin-right: 27px
+.wheel
+
+  background: #0A1633
+  border-radius: 8px
+  padding: 34px 33px 32px 36px
+  margin-bottom: 138px
+  &__wrapper
+    background-color: #080F29
+    border-radius: 7px
+    padding: 35px 38px 35px 35px
+    overflow: hidden
+    position: relative
+  &__title
+    font-weight: bold
+    font-size: 35px
+    line-height: 44px
+    text-align: right
+    color: #FFFFFF
+    margin-bottom: 11px
+    max-width: 523px
+    margin-left: auto
+    margin-right: 0
+  &__description
+    font-weight: 500
+    font-size: 14px
+    line-height: 18px
+    text-align: right
+    color: rgba(255, 255, 255, 0.55)
+    margin-bottom: 43px
+  &__button
+    font-weight: 500
+    font-size: 14.9197px
+    line-height: 19px
+    color: #FFFFFF
+    background: #1973F4
+    box-shadow: 0px 4px 17px rgba(25, 115, 244, 0.38)
+    border: none
+    border-radius: 10.9224px
+    padding: 18px 58px
+    display: block
+    margin-left: auto
+    margin-right: 0
+    position: relative
+    z-index: 10
+  &__wheel
+    width: 208px
+    height: 208px
+  &__svg
+    position: absolute
+    top: 32px
+    left: 0
+    width: 208px
+    height: 226px
+    z-index: 10
+  &__arrow
+    position: absolute
+    top: 46%
+    left: 89px
+    z-index: 11
+  &__decord
+    width: 777px
+    height: 123px
+    position: absolute
+    bottom: 0
+    left: 0
+  &__decorl
+    width: 385px
+    height: 112px
+    position: absolute
+    bottom: 0
+    left: -6px
+    z-index: 8
+.chat
+  width: 294px
+  max-height: 788px
+  background-color: #0D1736
+  border-radius: 5px
+  position: relative
+  margin-bottom: 30px
+  padding-bottom: 85px
+  &-scroll
+    display: none
+    align-items: center
+    justify-content: center
+    width: 38px
+    height: 38px
+    background: linear-gradient(145.41deg, rgba(50, 54, 125, 0.7) 10.44%, rgba(49, 54, 126, 0.7) 88.37%)
+    border: none
+    border-radius: 50%
+    &__icon
+      width: 14px
+      height: 8px
+  &-header
+    background: rgba(33, 40, 79, 0.4)
+    border-radius: 5px
+    padding: 20px
+    display: flex
+    align-items: center
+    &__icon
+      margin-right: 3px
+      width: 15px
+      height: 15px
+    &__title
+      font-weight: 500
+      font-size: 9.36715px
+      line-height: 12px
+      color: #FFFFFF
+      opacity: 0.65
+  &-messages
+    padding: 22px
+    padding-bottom: 12px
+    max-height: 643px
+    overflow-y: auto
+  &-message
+    display: flex
+    align-items: flex-start
+    &:not(:last-child)
+      margin-bottom: 13px
+    &__avatar
+      width: 33px
+      height: 33px
+      object-fit: cover
+      border-radius: 5px
+      margin-right: 7px
+    &__text
+      margin-left: 0
+      margin-right: auto
+      display: block
+    &__name
+      font-weight: 500
+      font-size: 9.36715px
+      line-height: 12px
+      color: #4E5E92
+      margin-bottom: 5px
+    &__date
+      font-weight: 500
+      font-size: 9.36715px
+      line-height: 12px
+      color: #4E5E92
+    &__message
+      font-family: TT Interfaces
+      font-style: normal
+      font-weight: 500
+      font-size: 9px
+      line-height: 11px
+      color: #FFFFFF
+  &-submit
+    background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%)
+    border: none
+    padding: 6px 5px 4px 7px
+    border-radius: 5px
+    position: absolute
+    top: 10px
+    right: 44px
+    &__icon
+      width: 17px
+      height: 17px
+  &-form
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 0 29px 24px 29px
+    margin-bottom: 0
+    margin-top: 12px
+  &-input
+    width: 100%
+    padding: 20px 50px 20px 17px
+    font-weight: 500
+    font-size: 8.5px
+    line-height: 11px
+    color: #FFFFFF
+    opacity: 0.65
+    background: rgba(33, 40, 79, 0.4)
+    border-radius: 5px
+    border: none
+    &::placeholder
+      font-weight: 500
+      font-size: 8.5px
+      line-height: 11px
+      color: #FFFFFF
+      opacity: 0.65
+    &:focus
+      outline: none
+  &-open
+    &-button
+      display: none
+      padding: 10px 2px
+      width: 100%
+      font-weight: 600
+      font-size: 12px
+      line-height: 15px
+      color: #FFFFFF
+      background-color: #050E25
+      border: none
+.blur
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  bottom: 75px
+  left: 0
+  right: 17px
+  height: 66px
+  &-on
+    backdrop-filter: blur(6px)
+    & .chat-scroll
+      display: flex
+
+.balance
+  &-history
+    padding: 12px 0
+    font-weight: 500
+    font-size: 9.5px
+    line-height: 12px
+    background: rgba(25, 115, 244, 0.44)
+    border: none
+    color: #fff
+    border-radius: 7px
+    margin-bottom: 7px
+    flex-basis: 100%
+  &-group
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+  &-deposit
+    color: #fff
+    font-weight: 500
+    font-size: 9.56182px
+    line-height: 12px
+    padding: 12px
+    flex-basis: 49%
+    background-color: #1973F4
+    border-radius: 7px
+    border: none
+  &-withdraw
+    color: #fff
+    font-weight: 500
+    font-size: 9.56182px
+    line-height: 12px
+    padding: 12px
+    flex-basis: 49%
+    background-color: #092758
+    border-radius: 7px
+    border: none
+.referral-program
+  background: #0A1633
+  border-radius: 8px
+  padding: 29px 38px 39px 36px
+  display: none //flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 20px
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-basis: 100%
+  &__block
+    width: 277px
+  &__title
+    font-weight: 500
+    font-size: 19.1236px
+    line-height: 24px
+    margin-bottom: 29px
+  &__item
+    background: #080F29
+    border-radius: 7.43698px
+    padding: 16px 20px
+    &-title
+      font-weight: 500
+      font-size: 9.5px
+      line-height: 12px
+      color: rgba(255, 255, 255, 0.5)
+      margin: 0
+      margin-bottom: 3px
+    &-text
+      font-weight: bold
+      font-size: 13.8px
+      line-height: 17px
+      color: #FFFFFF
+      background-color: transparent
+      border: none
+      &:focus
+        outline: none
+      &::placeholder
+        font-weight: bold
+        font-size: 13.8px
+        line-height: 17px
+        color: #FFFFFF
+    &-small
+      width: 48%
+      text-align: center
+      display: inline-block
+    &-link
+      font-weight: bold
+      font-size: 14px
+      line-height: 17px
+      text-decoration: none
+      color: #fff
+.history-play
+  display: none
+  background: #0A1633
+  border-radius: 8px
+  padding: 29px 36px 36px 36px
+  margin-bottom: 10px
+  &__title
+    font-weight: 500
+    font-size: 19.1236px
+    line-height: 24px
+    color: #FFFFFF
+    margin-bottom: 24px
+  &__item
+    background: #080F29
+    border-radius: 9px
+    padding: 19px 20px 16px 20px
+    text-align: center
+    width: 129px
+    &-title
+      font-weight: 500
+      font-size: 11.6px
+      line-height: 15px
+      text-align: center
+      color: rgba(255, 255, 255, 0.5)
+      margin-bottom: 6px
+    &-text
+      font-weight: bold
+      font-size: 17px
+      line-height: 21px
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+.transactions
+  display: none
+  background: #0A1633
+  border-radius: 8px
+  padding: 35px 37px 43px 37px
+  &__title
+    font-weight: 500
+    font-size: 19px
+    line-height: 24px
+    color: #FFFFFF
+    margin-bottom: 30px
+  &-table
+    width: 100%
+    border-spacing: 0 15px
+    &__head
+      font-weight: 500
+      text-align: left
+      font-size: 14px
+      line-height: 18px
+      padding-bottom: 22px
+      color: rgba(255, 255, 255, 0.5)
+    &__tr
+      padding: 31px 0
+      background: #080F29
+      border-radius: 9px
+      width: 100%
+      &:first-child
+    &__content
+      font-weight: 500 
+      font-size: 14px
+      line-height: 18px
+      color: rgba(255, 255, 255, 0.5)
+      padding: 31px 0
+    &__left
+      padding-left: 30px
+      border-top-left-radius: 9px
+      border-bottom-left-radius: 9px
+    &__right
+      border-top-right-radius: 9px
+      border-bottom-right-radius: 9px
+.safety
+  display: flex
+  align-items: flex-start
+  background: #0A1633
+  border-radius: 8px
+  padding: 30px 36px
+  &__title
+    font-weight: 500
+    font-size: 19.1236px
+    line-height: 24px
+    color: #FFFFF
+    margin-bottom: 25px
+  &__block
+    &:last-child
+      
+      margin-left: 113px
+      margin-right: auto
+    &-item
+      padding: 16px 20px 
+      background: #080F29
+      border-radius: 7px
+      margin-bottom: 10px
+    &-title
+      font-weight: 500
+      font-size: 9px
+      line-height: 12px
+      color: rgba(255, 255, 255, 0.5)
+      margin-bottom: 3px
+    &-data
+      font-weight: bold
+      font-size: 14px
+      line-height: 17px
+      color: #FFFFFF
+      background-color: transparent
+      border: none
+      &:focus
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        outline: none
+      &::placeholder
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+    &-info
+      font-weight: 500
+      font-size: 11px
+      line-height: 14px
+      color: rgba(255, 255, 255, 0.5)
+      margin-bottom: 31px
+      max-width: 326px
+    &-button
+      background: #1973F4
+      border-radius: 7px
+      border: none
+      padding: 12px 31px
+      color: #FFFFFF
+  &-bind
+    &__wrapper
+      display: flex
+      align-items: center
+      margin-bottom: 31px
+    &__item
+      background: rgba(233, 26, 26, 0.2)
+      border: 2px solid rgba(255, 91, 91, 0.29)
+      border-radius: 6px
+      padding: 13px 10px
+      &:first-child
+        margin-right: 18px
+      &-title
+        font-weight: 500
+        margin-bottom: 5px
+        font-size: 8px
+        line-height: 10px
+        color: rgba(255, 255, 255, 0.5)
+        display: block
+      &-text
+        font-weight: bold
+        font-size: 11px
+        line-height: 14px
+        color: #FFFFFF
+        display: block
+      &-success
+        background: rgba(26, 233, 109, 0.31)
+        border: 2px solid rgba(134, 255, 91, 0.29)
+    &__button
+      padding: 13px 22px
+      font-weight: 500
+      font-size: 10px
+      line-height: 12px
+      color: #FFFFFF
+      background: rgba(25, 115, 244, 0.44)
+      border-radius: 7px
+      border: none

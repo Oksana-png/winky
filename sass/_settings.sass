@@ -1,0 +1,91 @@
+*
+	box-sizing: border-box
+@font-face 
+  font-family: "Geometria"
+  font-style: normal
+  font-weight: bold
+  src: local("Geometria"), url("../font/Geometria-Bold.woff2") format("woff2"), url("../font/Geometria-Bold.woff") format("woff")
+@font-face 
+  font-family: "Geometria"
+  font-style: normal
+  font-weight: 500
+  src: local("Geometria"), url("../font/Geometria-Medium.woff2") format("woff2"), url("../font/Geometria-Medium.woff") format("woff")
+@font-face 
+  font-family: "Geometria"
+  font-style: normal
+  font-weight: normal
+  src: local("Geometria"), url("../font/Geometria-Regular.woff2") format("woff2"), url("../font/Geometria-Regular.woff") format("woff")
+@font-face 
+  font-family: "TT Interfaces"
+  font-style: normal
+  font-weight: bold
+  src: local("TT Interfaces"), url("../font/TTInterfaces-Bold.woff2") format("woff2"), url("../font/TTInterfaces-Bold.woff") format("woff")
+@font-face 
+  font-family: "TT Interfaces"
+  font-style: normal
+  font-weight: normal
+  src: local("TT Interfaces"), url("../font/TTInterfaces-Regular.woff2") format("woff2"), url("../font/TTInterfaces-Regular.woff") format("woff")
+@font-face 
+  font-family: "TT Interfaces"
+  font-style: normal
+  font-weight: 500
+  src: local("TT Interfaces"), url("../font/TTInterfaces-Medium.woff2") format("woff2"), url("../font/TTInterfaces-Medium.woff") format("woff")
+html
+	height: 100%
+	width: 100%
+body
+	margin: 0
+	padding: 0
+	background-color: #000C26
+	display: grid
+	height: 100%
+	grid-template-columns: 100px 1fr
+	grid-template-rows: 81px 1fr 125px
+	grid-template-areas: "nav hr" "nav mn" "fr fr"
+	font-family: "Geometria", sans-serif
+	color: #FFFFFF
+ul
+  margin: 0
+  padding: 0
+button
+	font-family: "Geometria", sans-serif
+	cursor: pointer
+	padding: 0
+p
+	margin: 0
+h2,h3,h4,h5,h6
+	margin: 0
+.icon
+	width: 20px
+	height: 20px
+.header
+  grid-area: hr
+.header
+	padding: 20px 0
+	border-bottom: 2px solid rgba(50, 58, 98, 0.4)
+.nav
+  grid-area: nav
+  padding-top: 25px
+.nav
+	border-right: 2px solid #141E3E
+.content
+  grid-area: mn
+.content
+	padding-top: 39px
+.footer
+  grid-area: fr
+.footer
+	background: rgba(20, 30, 62, 0.64)
+	padding: 20px 0
+	&-container
+		max-width: 590px
+		margin-left: 400px
+		margin-right: auto
+		display: flex
+		justify-content: space-between
+.container
+	max-width: 1280px
+	margin-left: 20px
+	margin-right: auto
+.none
+	display: none
