@@ -49,9 +49,34 @@
       line-height: 14px
       color: #D7D7D7
       padding: 7px
+  &-mine
+    &__buttons
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 12px
+    &__button
+      background: #1A254E
+      border-radius: 8px
+      font-weight: 500
+      font-size: 18px
+      line-height: 23px
+      padding: 12px
+      color: #FFFFFF
+      border: none
+      min-width: 46px
+      display: flex
+      align-items: center
+      justify-content: center
+      &--active
+        background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%)
+    &__icon
+      width: 23px
+      height: 23px
+    
 .coin
   width: 76%
-  display: flex
+  display: none //flex
   flex-wrap: wrap
   gap: 21px
   & .bet
@@ -81,6 +106,7 @@
       display: flex
       align-items: center
       justify-content: center
+      position: relative
       gap: 25px
     &__info
       background: rgba(67, 66, 83, 0.5)
@@ -207,7 +233,6 @@
       &-line
         border-bottom: 2px solid #1A2F61
         border-top: 2px solid #1A2F61
-      
 .hit
   width: 76px
   border: 1.86364px solid rgba(86, 83, 208, 0.29)
@@ -258,3 +283,69 @@
     font-size: 11px
     line-height: 13px
     color: #FFFFFF
+.play-result
+  position: absolute
+  top: 50%
+  right: 50%
+  transform: translate(50%, -50%)
+  background: rgba(67, 66, 83, 0.5)
+  backdrop-filter: blur(8px)
+  border-radius: 9px
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 14px 29px
+  &__title
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: #FFFFFF
+  &__ratio
+    font-weight: bold
+    font-size: 54px
+    line-height: 68px
+  &--win
+    color: #FFE03C
+  &--lose
+    color: #F85656
+  &__value
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    color: #FFFFFF
+.mine
+  display: flex
+  width: 76%
+  flex-wrap: wrap
+  & .bet
+    padding: 26px 30px
+    min-height: 400px
+    margin-bottom: 20px
+  &-field
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 20px
+    &__wrapper
+      position: relative
+      width: 305px
+      height: 305px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: 45px
+    &__elem
+      display: block
+      width: 54px
+      height: 54px
+      background: #4C48D7
+      border-radius: 7px
+      font-weight: bold
+      font-size: 36px
+      line-height: 45px
+      color: #BEBCFF
+      border: none
+    &__hits
+      display: flex
+      align-items: center

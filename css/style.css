@@ -2006,11 +2006,53 @@ h2, h3, h4, h5, h6 {
   padding: 7px;
 }
 
-.coin {
-  width: 76%;
+.bet-mine__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.bet-mine__button {
+  background: #1A254E;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 12px;
+  color: #FFFFFF;
+  border: none;
+  min-width: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bet-mine__button--active {
+  background: -webkit-gradient(linear, left top, right top, from(#00C6FB), to(#005BEA));
+  background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%);
+}
+
+.bet-mine__icon {
+  width: 23px;
+  height: 23px;
+}
+
+.coin {
+  width: 76%;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 21px;
@@ -2072,6 +2114,7 @@ h2, h3, h4, h5, h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   gap: 25px;
 }
 
@@ -2339,6 +2382,126 @@ h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
 
+.play-result {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  background: rgba(67, 66, 83, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 29px;
+}
+
+.play-result__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.play-result__ratio {
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 68px;
+}
+
+.play-result--win {
+  color: #FFE03C;
+}
+
+.play-result--lose {
+  color: #F85656;
+}
+
+.play-result__value {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.mine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 76%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mine .bet {
+  padding: 26px 30px;
+  min-height: 400px;
+  margin-bottom: 20px;
+}
+
+.mine-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.mine-field__wrapper {
+  position: relative;
+  width: 305px;
+  height: 305px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.mine-field__elem {
+  display: block;
+  width: 54px;
+  height: 54px;
+  background: #4C48D7;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  color: #BEBCFF;
+  border: none;
+}
+
+.mine-field__hits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (min-width: 1500px) {
   .container {
     max-width: 95%;
@@ -2360,13 +2523,13 @@ h2, h3, h4, h5, h6 {
   .footer-container {
     margin: auto;
   }
-  .coin {
+  .coin, .mine {
     width: 77%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .coin-field {
+  .coin-field, .mine-field {
     width: 68%;
   }
 }
@@ -2425,7 +2588,7 @@ h2, h3, h4, h5, h6 {
   .banner-wrapper {
     padding: 59px 82px 45px 31px;
   }
-  .coin {
+  .coin, .mine {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: vertical;
@@ -2438,7 +2601,7 @@ h2, h3, h4, h5, h6 {
     width: 75%;
     margin-right: 10px;
   }
-  .coin-field {
+  .coin-field, .mine-field {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -2475,7 +2638,7 @@ h2, h3, h4, h5, h6 {
     -ms-grid-columns: (minmax(259px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
   }
-  .coin {
+  .coin, .mine {
     width: 70%;
   }
   .swiper {
@@ -2511,7 +2674,7 @@ h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1117px) {
-  .main, .coin {
+  .main, .coin, .mine {
     width: 65%;
   }
   .profile {
@@ -2670,6 +2833,9 @@ h2, h3, h4, h5, h6 {
   }
   .coin-field__one {
     margin-bottom: 30px;
+  }
+  .mine {
+    width: 100%;
   }
   .hit:nth-child(n+5) {
     display: -webkit-box;
@@ -3331,11 +3497,44 @@ h2, h3, h4, h5, h6 {
   .bet-table {
     display: none;
   }
+  .bet-mine__button {
+    font-size: 19.2571px;
+    line-height: 24px;
+    width: 50px;
+    height: 50px;
+  }
   .hit:nth-child(n+4) {
     display: none;
   }
   .hit:nth-child(n+3)::after {
     display: none;
+  }
+  .mine {
+    padding-top: 48px;
+  }
+  .mine-field {
+    margin-bottom: 0;
+  }
+  .mine-field__wrapper {
+    width: 337px;
+    height: 337px;
+  }
+  .mine-field__rusult {
+    width: 33px;
+    height: 33px;
+  }
+  .mine-field__elem {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .mine-field__hits {
+    display: none;
+  }
+  .mine .bet {
+    min-height: 300px;
+    padding: 28px 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */
