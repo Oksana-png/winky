@@ -16,8 +16,10 @@
     &-container
       margin: auto
   .coin
-    width: 78%
+    width: 77%
     justify-content: space-between
+    &-field
+      width: 68%
 @media (max-width: 1430px)
   .container
     width: 1117px
@@ -58,10 +60,22 @@
       padding: 59px 82px 45px 31px
   .coin
     flex-wrap: wrap
+    flex-direction: column
     justify-content: flex-start
-    width: 57%
+    width: 75%
+    margin-right: 10px
     &-field
       order: -1
+  .bet
+    &-table
+      margin-bottom: 20px
+  .bet
+    width: 100%
+    &-money
+      &__wrapper
+        justify-content: space-between
+      &__plus
+        flex-basis: 30%
 @media (max-width: 1270px)
   .container
     width: 92%
@@ -73,6 +87,8 @@
     &-play
       &__wrapper
         grid-template-columns: repeat(auto-fit, minmax(259px, 1fr))
+  .coin
+    width: 70%
   .swiper
     height: 342px
     & .wheel
@@ -99,7 +115,7 @@
   .swiper
     max-width: calc(59vw + 2px)
 @media (max-width: 1117px)
-  .main
+  .main, .coin
     width: 65%
   .profile
     width: 65%
@@ -213,13 +229,6 @@
       width: 100%
       &__one
         margin-bottom: 30px
-  .bet
-    width: 100%
-    &-money
-      &__wrapper
-        justify-content: space-between
-      &__plus
-        flex-basis: 30%
   .hit
     &:nth-child(n+5)
       display: flex
@@ -728,6 +737,9 @@
         &-right
           left: -111px 
           top: 153px
+  .bet
+    &-table
+      display: none
   .hit
     &:nth-child(n+4)
       display: none

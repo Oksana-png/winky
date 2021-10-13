@@ -50,8 +50,10 @@
       color: #D7D7D7
       padding: 7px
 .coin
+  width: 76%
   display: flex
-  gap: 30px
+  flex-wrap: wrap
+  gap: 21px
   & .bet
     max-height: 400px
     &-button
@@ -117,6 +119,95 @@
     &__hits
       display: flex
       align-items: center
+.bet
+  &-table
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap 
+    width: 100%
+    background: #0A1633
+    border-radius: 7px
+    padding: 16px 25px 10px 25px
+    &__menu
+      margin-bottom: 15px
+    &__title
+      font-weight: 500
+      font-size: 9px
+      line-height: 12px
+      color: #FFFFFF
+    &__button
+      border: none
+      background-color: transparent
+      font-weight: 500
+      font-size: 9px
+      line-height: 12px
+      color: #FFFFFF
+      &:not(:last-child)
+        margin-right: 22px
+      &--active
+        position: relative
+        &::after
+          content: ''
+          width: 100%
+          position: absolute
+          bottom: -3px
+          left: 0
+          background-color: #01C0FA
+          height: 1px
+    &__table
+      flex-basis: 100%
+      border-collapse: collapse
+    &__play
+      &-text
+        font-weight: bold
+        font-size: 8px
+        line-height: 10px
+        text-transform: uppercase
+        color: #FFFFFF
+      &-img
+        margin-right: 4px
+        width: 19px
+        height: 19px
+    &__avatar
+      width: 19px
+      height: 19px
+      border-radius: 50%
+      margin-right: 4px
+    &__body
+      max-height: 345px
+      overflow-y: hidden
+      &-sell
+
+        font-weight: bold
+        font-size: 8px
+        line-height: 10px
+        color: #FFFFFF
+        vertical-align: middle
+        padding: 10px 0
+        width: 16.6%
+      &-line
+        &:not(:last-child)
+          border-bottom: 1px solid #0F1E42
+        & .bet-table__body-sell
+          &:last-child
+            text-align: right
+            max-width: 0%
+    &__head
+      &-sell
+        text-align: left
+        font-weight: 500
+        font-size: 8px
+        line-height: 10px
+        color: #3C5A9F
+        padding: 9px 0
+        &:last-child
+          text-align: right
+          max-width: 0%
+      &-line
+        border-bottom: 2px solid #1A2F61
+        border-top: 2px solid #1A2F61
+      
 .hit
   width: 76px
   border: 1.86364px solid rgba(86, 83, 208, 0.29)
