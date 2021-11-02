@@ -49,6 +49,33 @@ const navigationAccount = (str) => {
   document.querySelector('.header').classList.remove('nav-open');
 };
 
+// показать уведомление
+const showNotification = (str) => {
+  let notification = document.createElement('div');
+  notification.classList.add('notification');
+
+  notification.innerHTML = `
+    <h4 class="notification__title">Пополнение</h4>
+    <span class="notification__text">Ваш счет пополнен на ${str}</span>
+  `;
+
+  document.body.append(notification);
+  setTimeout(() => {
+    document.querySelector('.notification').style.animation = 'delete 1.5s 1';
+    setTimeout(() => {
+      notification.remove();
+    }, 1500);
+  }, 4000);
+};
+// открывает модальное окно с телеграмом
+const openTelegram = () => {
+  document.querySelector('.telegram').classList.add('modal-open');
+};
+// закрывает модальное окно с телеграмом
+const closeTelegram = () => {
+  document.querySelector('.telegram').classList.remove('modal-open');
+};
+
 buttonOpenMenu.addEventListener('click', openMenu);
 buttonOpenAccount.addEventListener('click', openMenuAccount);
 
@@ -61,6 +88,10 @@ document.addEventListener('click', (e) => {
   closeMenuAccount();
  } else if (target.closest('.profile-nav__item')) {
   navigationAccount(target.closest('.profile-nav__item').dataset.nav);
+ } else if (target.classList.contains('telegram')) {
+   closeTelegram();
+ } else if (target.closest('.chat')) {
+   openTelegram();
  }
 });
 
@@ -88,7 +119,4 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-
-// $(document).ready(function(){
-//   $('.main-slider').slick();
-// });
+showNotification('1500$');

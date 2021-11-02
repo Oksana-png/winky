@@ -193,7 +193,7 @@
   font-size: 11px
   line-height: 14px
   padding: 15px 47px 13px 47px
-  background: linear-gradient(95.73deg, rgba(1, 194, 251, 0.15) 4.75%, rgba(1, 96, 235, 0.15) 100.9%);
+  background: linear-gradient(95.73deg, rgba(1, 194, 251, 0.15) 4.75%, rgba(1, 96, 235, 0.15) 100.9%)
   border: 1px solid rgba(1, 188, 250, 0.42)
   border-radius: 5px
   color: #fff
@@ -209,3 +209,283 @@
   border-radius: 5px
   border: none
   padding: 15px 30px 13px 30px
+.link
+  &-telegram
+    min-width: 340px
+    background: #131D3F
+    border-radius: 11px
+    padding: 22px 26px
+    position: relative
+    z-index: 1000
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__title
+      font-family: "Geometria"
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 15px
+      color: #FFFFFF
+      text-align: center
+      margin-bottom: 25px
+    &__item
+      width: 100%
+      background: #080F29
+      border-radius: 4px
+      padding: 7px 11px
+      margin-bottom: 4px
+      max-height: 35px
+      display: flex
+      flex-direction: column
+      &-title
+        font-family: Geometria
+        font-style: normal
+        font-weight: 500
+        font-size: 7px
+        line-height: 9px
+        color: rgba(255, 255, 255, 0.5)
+        margin-bottom: 5px
+      &-link
+        font-family: Geometria
+        font-style: normal
+        font-weight: bold
+        font-size: 7px
+        line-height: 9px
+        color: #FFFFFF
+        text-decoration: none
+      &-data
+        font-family: Geometria
+        font-style: normal
+        font-weight: bold
+        font-size: 7px
+        line-height: 9px
+        color: #FFFFFF
+    &__button
+      padding: 12px
+      width: 100%
+      font-family: Geometria
+      background: #1973F4
+      border-radius: 7px
+      font-style: normal
+      font-weight: 500
+      font-size: 9.5px
+      line-height: 12px
+      text-align: center
+      color: #FFFFFF
+      border: none
+      margin-top: 16px
+    &__line
+      display: none
+      margin-bottom: 21px
+      background: #2E3D72
+      border-radius: 13px
+      height: 6px
+      width: 47px
+.modal
+  &-overflow
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(18, 30, 58, 0.73)
+    display: none
+    align-items: center
+    justify-content: center
+    z-index: 11
+  &-registration
+    background: #131D3F
+    border-radius: 11px
+    padding: 22px 25px
+    display: flex
+    flex-direction: column
+    min-width: 300px
+    &__form
+      display: flex
+      flex-direction: column
+      width: 100%
+    &__title
+      font-family: Geometria
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 15px
+      text-align: center
+      color: #FFFFFF
+      margin-bottom: 25px
+    &__item
+      background: #080F29
+      border-radius: 3.96667px
+      min-width: 34px
+      padding: 7px 11px
+      margin-bottom: 4px
+      &-title
+        font-family: Geometria
+        font-style: normal
+        font-weight: 500
+        font-size: 7px
+        line-height: 9px
+        color: rgba(255, 255, 255, 0.5)
+        margin-bottom: 5px
+    &__input
+      background-color: transparent
+      color: #ffffff
+      font-family: Geometria
+      font-style: normal
+      font-weight: bold
+      font-size: 8px
+      line-height: 9px
+      border: none
+      &::placeholder
+        background-color: transparent
+        color: #ffffff
+        font-family: Geometria
+        font-style: normal
+        font-weight: bold
+        font-size: 8px
+        line-height: 9px
+      &:focus
+        outline: none
+    &__button
+      font-family: Geometria
+      font-style: normal
+      font-weight: 500
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      color: #FFFFFF
+      padding: 11px
+      margin-bottom: 15px
+      background: #1973F4
+      border-radius: 7px
+      border: none
+    &__rules
+      font-family: Geometria
+      font-style: normal
+      font-weight: 500
+      font-size: 7px
+      line-height: 9px
+      text-align: center
+      color: rgba(255, 255, 255, 0.62)
+      margin-top: 10px
+      margin-bottom: 14px
+      &-link
+        color: #5A6AFB
+        text-decoration: none
+    &__authorization
+      font-family: Geometria
+      font-style: normal
+      font-weight: 500
+      font-size: 7px
+      line-height: 9px
+      text-align: center
+      color: rgba(255, 255, 255, 0.62)
+      &-link
+        color: #5A6AFB
+        text-decoration: none
+    &__line
+      display: none
+      margin-bottom: 21px
+      background: #2E3D72
+      border-radius: 13px
+      height: 6px
+      width: 47px
+  &-entrance
+    padding: 22px 25px
+    display: flex
+    flex-direction: column
+    background: #131D3F
+    border-radius: 11px
+    min-width: 300px
+    &__form
+      width: 100%
+    &__title
+      font-family: Geometria
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 15px
+      text-align: center
+      color: #FFFFFF
+      margin-bottom: 25px
+    &__item
+      background: #080F29
+      border-radius: 3.96667px
+      min-height: 34px
+      padding: 7px 11px
+      margin-bottom: 4px
+      &-title
+        font-family: Geometria
+        font-style: normal
+        font-weight: 500
+        font-size: 7px
+        line-height: 9px
+        color: rgba(255, 255, 255, 0.5)
+        margin-bottom: 5px
+    &__input
+      background-color: transparent
+      color: #ffffff
+      font-family: Geometria
+      font-style: normal
+      font-weight: bold
+      font-size: 8px
+      line-height: 9px
+      border: none
+      &::placeholder
+        background-color: transparent
+        color: #ffffff
+        font-family: Geometria
+        font-style: normal
+        font-weight: bold
+        font-size: 8px
+        line-height: 9px
+      &:focus
+        outline: none
+    &__button
+      font-family: Geometria
+      font-style: normal
+      font-weight: 500
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      color: #FFFFFF
+      width: 100%
+      padding: 11px
+      margin-bottom: 15px
+      background: #1973F4
+      border-radius: 7px
+      border: none
+      margin-bottom: 16px
+      margin-top: 11px
+    &__registration
+      font-family: Geometria
+      font-weight: 500
+      font-size: 7px
+      line-height: 9px
+      text-align: center
+      color: #A5A9B6
+      margin-bottom: 11px
+      &-link
+        color: #5A6AFB
+        text-decoration: none
+    &__recover
+      font-family: Geometria
+      font-weight: 500
+      font-size: 7px
+      line-height: 9px
+      text-align: center
+
+      color: #A5A9B6
+      &-link
+        color: #5A6AFB
+        text-decoration: none
+    &__line
+      display: none
+      margin-bottom: 21px
+      background: #2E3D72
+      border-radius: 13px
+      height: 6px
+      width: 47px
+  &-open
+    display: flex

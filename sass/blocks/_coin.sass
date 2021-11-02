@@ -73,7 +73,20 @@
     &__icon
       width: 23px
       height: 23px
-    
+  &-bonus
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    &__circle
+      background: rgba(26, 48, 99, 0.65)
+      border: 3px solid rgba(50, 68, 114, 0.57)
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 127px
+      height: 127px
 .coin
   width: 76%
   display: none //flex
@@ -150,7 +163,7 @@
     display: flex
     justify-content: space-between
     align-items: flex-start
-    flex-wrap: wrap 
+    flex-wrap: wrap
     width: 100%
     background: #0A1633
     border-radius: 7px
@@ -204,7 +217,6 @@
       max-height: 345px
       overflow-y: hidden
       &-sell
-
         font-weight: bold
         font-size: 8px
         line-height: 10px
@@ -233,6 +245,102 @@
       &-line
         border-bottom: 2px solid #1A2F61
         border-top: 2px solid #1A2F61
+  &-bonus
+    &__cube
+      transform: rotate(-45deg)
+  &-wheel
+    &__cicrle
+      width: 28px
+      height: 28px
+      border-radius: 50%
+      background: #32884B
+      &--gray
+        background: #343A49
+      &--red
+        background: #DE564D
+      &--blue
+        background: #2D55E1
+    &__line
+      display: flex
+      align-items: center
+      &:not(:last-child)
+        margin-bottom: 12px
+      & .bet-wheel__cicrle
+        position: relative
+        &:not(:last-child)
+          margin-right: 11px
+          &::after
+            content: ''
+            background-image: url(../image/arrow-circle.png)
+            background-repeat: no-repeat
+            position: absolute
+            width: 8px
+            height: 16px
+            right: -11px
+            top: 50%
+            transform: translateY(-50%)
+  &-play
+    display: grid
+    flex-basis: 100%
+    grid-template-columns: repeat( auto-fit, minmax(214px, 1fr))
+    align-items: start
+    gap: 27px
+    &__block
+      min-width: 159px
+      width: 100%
+      background: #0A1633
+      border-radius: 7px
+      overflow: hidden
+    &__header
+      background: #343A49
+      font-weight: 500
+      font-size: 11px
+      line-height: 14px
+      color: #FFFFFF
+      padding: 12px 13px
+      &--green
+        background-color: #2E8F4E
+      &--blue
+        background-color: #2D55E1
+      &--red
+        background-color: #DE564D
+    &__avatar
+      border-radius: 50%
+      width: 29px
+      height: 29px
+      padding: 5px
+      border: 1px solid #0C1E49
+    &__name
+      font-weight: bold
+      font-size: 7px
+      line-height: 8px
+      color: #FFFFFF
+      margin-left: 9px
+      margin-right: auto
+    &__value
+      font-weight: bold
+      font-size: 7px
+      line-height: 8px
+      color: rgba(255, 255, 255, 0.33)
+    &__body
+      padding: 11px 14px 12px 13px
+      & .bet-play__bet
+        &:not(:last-child)
+          margin-bottom: 5px
+      &--none
+        padding: 28px 25px
+        font-weight: 500
+        font-size: 9px
+        line-height: 11px
+        color: #FFFFFF
+        background-image: url(../image/warning.png)
+        background-repeat: no-repeat
+        background-position: center
+        text-align: center
+    &__bet
+      display: flex
+      align-items: center
+      justify-content: space-between
 .hit
   width: 76px
   border: 1.86364px solid rgba(86, 83, 208, 0.29)
@@ -249,7 +357,6 @@
     right: -13px
     background-image: url(../image/hit-arrow-2.svg)
     background-repeat: no-repeat
-    z-index: 10
     height: 16px
     width: 8px
     top: 50%
@@ -314,7 +421,7 @@
     line-height: 23px
     color: #FFFFFF
 .mine
-  display: flex
+  display: flex //flex
   width: 76%
   flex-wrap: wrap
   & .bet
@@ -349,3 +456,16 @@
     &__hits
       display: flex
       align-items: center
+.wheel-bonus
+  display: none
+  & .bet
+    width: 315px
+    height: 284px
+.play-wheel
+  display: none //flex
+  flex-wrap: wrap
+  width: 76%
+  & .bet
+    max-height: 300px
+    &-money
+      margin-bottom: 48px

@@ -15,7 +15,7 @@
   .footer
     &-container
       margin: auto
-  .coin, .mine
+  .coin, .mine, .play-wheel
     width: 77%
     justify-content: space-between
     &-field
@@ -54,7 +54,7 @@
       flex-wrap: wrap
       gap: 23px
     &__item
-      flex-basis: 30% 
+      flex-basis: 30%
   .banner
     &-wrapper
       padding: 59px 82px 45px 31px
@@ -66,16 +66,25 @@
     margin-right: 10px
     &-field
       order: -1
-  .bet
-    &-table
-      margin-bottom: 20px
+  .play-wheel
+    width: 72%
+    margin-right: 10px
+    &-field
+      order: -1
   .bet
     width: 100%
+    &-table
+      margin-bottom: 20px
+    &-wheel
+      &__line
+        justify-content: center
     &-money
       &__wrapper
         justify-content: space-between
       &__plus
         flex-basis: 30%
+    &-play
+      grid-template-columns: repeat(auto-fit, minmax(251px, 1fr))
 @media (max-width: 1270px)
   .container
     width: 92%
@@ -87,7 +96,7 @@
     &-play
       &__wrapper
         grid-template-columns: repeat(auto-fit, minmax(259px, 1fr))
-  .coin, .mine
+  .coin, .mine, .play-wheel
     width: 70%
   .swiper
     height: 342px
@@ -115,7 +124,7 @@
   .swiper
     max-width: calc(59vw + 2px)
 @media (max-width: 1117px)
-  .main, .coin, .mine
+  .main, .coin, .mine, .play-wheel
     width: 65%
   .profile
     width: 65%
@@ -238,6 +247,18 @@
       &::after
         display: block
         width: 8px
+  .play
+    &-wheel
+      width: 100%
+      & .bet
+        margin-bottom: 20px
+      &-field
+        margin-bottom: 20px
+  .bet
+    &-play
+      margin-bottom: 20px
+      grid-template-columns: repeat(auto-fit, minmax(262px, 1fr))
+
 @media (max-width: 768px)
   body
     display: block
@@ -267,7 +288,7 @@
       bottom: 0
       right: 0
       background-color: #182243
-        
+
     &-container
       flex-direction: column
       position: relative
@@ -397,7 +418,7 @@
         padding: 12px 0
         font-size: 12px
         line-height: 15px
-        
+
     &-info
       background-color: transparent
       padding: 0
@@ -455,15 +476,15 @@
       top: 41%
       left: 32px
   .entrance
-    margin-right: 0 
+    margin-right: 0
     margin-bottom: 14px
   .balance
     &-history, &-deposit, &-withdraw
-    font-size: 12px
-    line-height: 15px
+      font-size: 12px
+      line-height: 15px
   .chat
     display: none
-    border-radius: 0 
+    border-radius: 0
     z-index: 102
     margin-bottom: 0
     &-open
@@ -701,7 +722,7 @@
       width: 126px
       height: 126px
       right: 0
-      bottom: 0 
+      bottom: 0
     &__title
       font-size: 14px
       line-height: 18px
@@ -737,7 +758,7 @@
           left: 70px
           top: 3px
         &-right
-          left: -111px 
+          left: -111px
           top: 153px
   .bet
     &-table
@@ -745,9 +766,31 @@
     &-mine
       &__button
         font-size: 19.2571px
-        line-height: 24px  
+        line-height: 24px
         width: 50px
         height: 50px
+    &-play
+      grid-template-columns: repeat(auto-fit, minmax(159px, 1fr))
+      &__header
+        font-size: 8px
+        line-height: 10px
+        padding: 9px
+      &__body
+        padding: 8px 10px 9px 10px
+        &--none
+          font-size: 7px
+          line-height: 8px
+      &__avatar
+        width: 22px
+        height: 22px
+        padding: 3px
+      &__name
+        margin-left: 3px
+        font-size: 5px
+        line-height: 6px
+      &__value
+        font-size: 5px
+        line-height: 6px
   .hit
     &:nth-child(n+4)
       display: none
@@ -774,5 +817,88 @@
     & .bet
       min-height: 300px
       padding: 28px 24px
+  .link-telegram
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    height: 356px
+    background: #182243
+    border-radius: 25px 25px 0px 0px
+    padding: 30px 20px 36px 30px
+    &__title
+      font-weight: 500
+      font-size: 22.3448px
+      line-height: 28px
+      color: #FFFFFF
+    &__item
+      max-height: 56px
+      padding: 11px 18px
+      margin-bottom: 6px
+      &-title
+        font-size: 11.5534px
+        line-height: 15px
+        margin-bottom: 8px
+      &-link, &-data
+        font-size: 11.5534px
+        line-height: 15px
+    &__button
+      margin-top: 30px
+      font-size: 15.7817px
+      line-height: 20px
+      padding: 19px
+    &__line
+      display: block
+  .modal
+    &-registration, &-entrance
+      position: fixed
+      bottom: 0
+      right: 0
+      left: 0
+      width: 100%
+      padding: 30px 25px 22px 25px
+      border-radius: 25px 25px 0px 0px
+      align-items: center
+      &__line
+        display: flex
+      &__title
+        font-size: 22.3448px
+        line-height: 28px
+      &__item
+        height: 56px
+        padding: 11px 18px
+        &-title
+          font-size: 11.5534px
+          line-height: 15px
+          margin-bottom: 0px
+      &__input
+        font-size: 12.1586px
+        line-height: 15px
+        &::placeholder
+          font-size: 12.1586px
+          line-height: 15px
+        &:focus
+          font-size: 12.1586px
+          line-height: 15px
+      &__rules
+        font-size: 9.14078px
+        line-height: 11px
+        margin-top: 40px
+        margin-bottom: 18px
+      &__button
+        padding: 15px
+        font-size: 12.4861px
+        line-height: 16px
 
-      
+        margin-bottom: 20px
+      &__authorization
+        font-size: 9.14078px
+        line-height: 11px
+    &-entrance
+      &__button
+        margin-top: 43px
+      &__registration
+        margin-bottom: 17px
+      &__item
+        &-title
+          margin-bottom: 5px
