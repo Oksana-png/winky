@@ -421,9 +421,10 @@
     line-height: 23px
     color: #FFFFFF
 .mine
-  display: flex //flex
+  display: none //flex
   width: 76%
   flex-wrap: wrap
+  justify-content: space-between
   & .bet
     padding: 26px 30px
     min-height: 400px
@@ -457,10 +458,72 @@
       display: flex
       align-items: center
 .wheel-bonus
-  display: none
+  display: none //flex
+  flex-wrap: wrap
+  width: 76%
+  gap: 10px
+  margin-right: 10px
   & .bet
-    width: 315px
+    min-width: 315px
+    max-width: 315px
     height: 284px
+  &-field
+    width: 59%
+    max-height: 300px
+    &__x
+      margin: auto
+      margin-bottom: 7px
+      font-family: Geometria
+      background: linear-gradient(90deg, #00C6FB 0%, #3985FC 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      display: table
+      color: #00C6FB
+      font-weight: bold
+      font-size: 49.6px
+      line-height: 45px
+      text-shadow: 0px 4px 36px rgba(41, 151, 252, 0.53)
+    &__field
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      width: 272px
+      justify-content: space-between
+      gap: 9px
+      margin: auto
+      margin-bottom: 13px
+    &__img
+      width: 31px
+      height: 31px
+    &__cubes
+      margin: auto
+      max-width: 269px
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__open
+      background: #D7B426
+      border-radius: 7.99994px
+      width: 37px
+      height: 37px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: Geometria
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      color: #0A1633
+    &__close
+      background: #5AAB38
+      border-radius: 7.99994px
+      width: 37px
+      height: 37px
+      background-image: url(../image/arrow-play-bonus.svg)
+      background-repeat: no-repeat
+      background-position: center
+    &__inactive
+      opacity: 0.4
 .play-wheel
   display: none //flex
   flex-wrap: wrap
@@ -469,3 +532,123 @@
     max-height: 300px
     &-money
       margin-bottom: 48px
+.dice
+  display: flex
+  flex-wrap: wrap
+  gap: 37px
+  margin-right: 10px
+  &-field
+    &__bet
+      width: 100%
+      padding: 24px 25px
+      background: #0A1633
+      border-radius: 8px
+      display: flex
+      align-items: center
+    &__title
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: #6279B1
+      margin-bottom: 10px
+    &__data
+      background: #080F29
+      border-radius: 4px
+      padding: 8px 13px
+      font-weight: 500
+      font-size: 10px
+      line-height: 13px
+      color: #FFFFFF
+    &__block
+      min-width: 165px
+      width: 100%
+      &:not(:last-child)
+        margin-right: 35px
+    &__container
+      background: #0A1633
+      border-radius: 9px
+      padding: 7px
+    &__input
+      background-color: #080F29
+      border-radius: 4px
+      height: 23px
+      -webkit-appearance: none
+      width: 100%
+      padding: 0 10px
+
+      &[type='range']::-webkit-slider-thumb
+        box-shadow: 0px 0px 0px #000000
+        border: 0px solid #000000
+        height: 18px
+        width: 28px
+        border-radius: 5px
+        background: #017EF0
+        cursor: pointer
+        -webkit-appearance: none
+        margin-top: -7px
+      &[type=range]::-webkit-slider-runnable-track
+        width: 100%
+        height: 4px
+        cursor: pointer
+        animate: 0.2s
+        box-shadow: 0px 0px 0px #50555C
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166))
+        border-radius: 3px
+        border: 0px solid #FF6166
+      &[type=range]:focus::-webkit-slider-runnable-track
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166))
+
+      &[type=range]::-moz-range-track
+        width: 100%
+        height: 4px
+        cursor: pointer
+        animate: 0.2s
+        box-shadow: 0px 0px 0px #50555C
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166))
+        border-radius: 3px
+        border: 0px solid #080F29
+      &[type=range]::-moz-range-thumb
+        box-shadow: 0px 0px 0px #000000
+        border: 0px solid #000000
+        height: 18px
+        width: 28px
+        border-radius: 5px
+        background: #017EF0
+        cursor: pointer
+
+      &[type=range]::-ms-track
+        width: 100%
+        height: 4px
+        cursor: pointer
+        animate: 0.2s
+        background: transparent
+        border-color: transparent
+        color: transparent
+
+      &[type=range]::-ms-fill-lower
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166))
+        border: 0px solid #080F29
+        border-radius: 6px
+        box-shadow: 0px 0px 0px #50555C
+
+      &[type=range]::-ms-fill-upper
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166))
+        border: 0px solid #080F29
+        border-radius: 6px
+        box-shadow: 0px 0px 0px #50555C
+
+      &[type=range]::-ms-thumb
+        margin-top: 1px
+        box-shadow: 0px 0px 0px #000000
+        border: 0px solid #000000
+        height: 18px
+        width: 28px
+        border-radius: 5px
+        background: #017EF0
+        cursor: pointer
+
+      &[type=range]:focus::-ms-fill-lower
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166))
+
+      &[type=range]:focus::-ms-fill-upper
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166))

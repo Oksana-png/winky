@@ -12,6 +12,11 @@
   <title>WINKY</title>
 </head>
 <body>
+  <style>
+    .dice-field__input::-webkit-slider-runnable-track {
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(0.95, #94A14E), color-stop(0.95, #C5C5C5));
+    }
+  </style>
   <header class="header">
     <div class="header-wrapper">
       <div class="container header-container">
@@ -871,7 +876,30 @@
         <div class="wheel-bonus-field">
           <div class="wheel-bonus-field__x">x241</div>
           <div class="wheel-bonus-field__field">
-            
+            <div class="wheel-bonus-field__open">x46</div>
+            <div class="wheel-bonus-field__close"></div>
+            <div class="wheel-bonus-field__open">x20</div>
+            <div class="wheel-bonus-field__open">x20</div>
+            <div class="wheel-bonus-field__open">x40</div>
+            <div class="wheel-bonus-field__open">x50</div>
+            <div class="wheel-bonus-field__open wheel-bonus-field__inactive">x20</div>
+            <div class="wheel-bonus-field__open wheel-bonus-field__inactive">x30</div>
+            <div class="wheel-bonus-field__close"></div>
+            <div class="wheel-bonus-field__open wheel-bonus-field__inactive">x26</div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__open">x12</div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__open wheel-bonus-field__inactive">x16</div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__open">x8</div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
+            <div class="wheel-bonus-field__close wheel-bonus-field__inactive"></div>
           </div>
           <div class="wheel-bonus-field__cubes">
             <img src="image/cube-1.png" alt="cube-1" class="wheel-bonus-field__img">
@@ -881,6 +909,235 @@
             <img src="image/cube-5.png" alt="cube-5" class="wheel-bonus-field__img">
             <img src="image/cube-6.png" alt="cube-6" class="wheel-bonus-field__img">
           </div>
+        </div>
+        <div class="bet-play">
+          <div class="bet-play__block">
+            <div class="bet-play__header">Ставка - x2</div>
+            <div class="bet-play__body">
+              <div class="bet-play__bet">
+                <img src="image/image-2.png" alt="Purple" class="bet-play__avatar">
+                <span class="bet-play__name">Purple</span>
+                <span class="bet-play__value">1000₽</span>
+              </div>
+              <div class="bet-play__bet">
+                <img src="image/image-2.png" alt="Purple" class="bet-play__avatar">
+                <span class="bet-play__name">Purple</span>
+                <span class="bet-play__value">1250₽</span>
+              </div>
+              <div class="bet-play__bet">
+                <img src="image/image-2.png" alt="Purple" class="bet-play__avatar">
+                <span class="bet-play__name">Purple</span>
+                <span class="bet-play__value">700₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="bet-play__block">
+            <div class="bet-play__header bet-play__header--green">Ставка - x3</div>
+            <div class="bet-play__body">
+              <div class="bet-play__bet">
+                <img src="image/image-2.png" alt="Purple" class="bet-play__avatar">
+                <span class="bet-play__name">Purple</span>
+                <span class="bet-play__value">1000₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="bet-play__block">
+            <div class="bet-play__header bet-play__header--blue">Ставка - x5</div>
+            <div class="bet-play__body">
+              <div class="bet-play__body--none">В данный момент пусто!</div>
+            </div>
+          </div>
+          <div class="bet-play__block">
+            <div class="bet-play__header bet-play__header--red">Ставка - Бонус</div>
+            <div class="bet-play__body">
+              <div class="bet-play__bet">
+                <img src="image/image-2.png" alt="Purple" class="bet-play__avatar">
+                <span class="bet-play__name">Purple</span>
+                <span class="bet-play__value">1000₽</span>
+              </div>
+              <div class="bet-play__bet">
+                <img src="image/image-2.png" alt="Purple" class="bet-play__avatar">
+                <span class="bet-play__name">Purple</span>
+                <span class="bet-play__value">1000₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dice">
+        <div class="bet">
+          <h4 class="bet__title">Сумма ставки</h4>
+          <div class="bet-money">
+            <div class="bet-money__now">0.99₽</div>
+            <div class="bet-money__wrapper">
+              <button class="bet-money__plus">
+                <svg class="icon">
+                  <use xlink:href="image/svg.svg#close"></use>
+                </svg>
+              </button>
+              <button class="bet-money__plus">+0.5</button>
+              <button class="bet-money__plus">+1.0</button>
+              <button class="bet-money__plus">+1.5</button>
+              <button class="bet-money__plus">+2.0</button>
+              <button class="bet-money__plus">+2.5</button>
+              <button class="bet-money__plus">Все</button>
+            </div>
+          </div>
+          <button class="bet-button">Играть</button>
+        </div>
+        <div class="dice-field">
+          <div class="dice-field__bet">
+            <div class="dice-field__block">
+              <div class="dice-field__title">Коэф.</div>
+              <div class="dice-field__data">2.15 х</div>
+            </div>
+            <div class="dice-field__block">
+              <div class="dice-field__title">Возможный выигрыш</div>
+              <div class="dice-field__data">44.09</div>
+            </div>
+            <div class="dice-field__block">
+              <div class="dice-field__title">Вероятность</div>
+              <div class="dice-field__data">44.09 %</div>
+            </div>
+          </div>
+          <div class="dice-field__field">
+            <div class="dice-field__container">
+              <input type="range" class="dice-field__input" step="1" min="0" max="100" value="20">
+            </div>
+          </div>
+        </div>
+        <div class="bet-table">
+          <div class="bet-table__title">LIVE</div>
+          <div class="bet-table__menu">
+            <button class="bet-table__button bet-table__button--active">ВСЕ ИГРЫ</button>
+            <button class="bet-table__button">МИНЫ</button>
+          </div>
+          <table class="bet-table__table">
+            <thead class="bet-table__head">
+              <tr class="bet-table__head-line">
+                <th class="bet-table__head-sell">Игра</th>
+                <th class="bet-table__head-sell">Игрок</th>
+                <th class="bet-table__head-sell">Время</th>
+                <th class="bet-table__head-sell">Ставка</th>
+                <th class="bet-table__head-sell">Коэф.</th>
+                <th class="bet-table__head-sell">ВЫЙГРЫШ</th>
+              </tr>
+            </thead>
+            <tbody class="bet-table__body">
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+              <tr class="bet-table__body-line">
+                <td class="bet-table__body-sell bet-table__body-center">
+                  <img src="image/icons/mine.png" alt="mine" class="bet-table__play-img">
+                  <span class="bet-table__play-text">МИНЫ</span>
+                </td>
+                <td class="bet-table__body-sell">
+                  <img src="image/image-2.png" alt="Purple" class="bet-table__avatar">
+                  <span class="bet-table__name">Purple</span>
+                </td>
+                <td class="bet-table__body-sell">22:03</td>
+                <td class="bet-table__body-sell">1000₽</td>
+                <td class="bet-table__body-sell">5x</td>
+                <td class="bet-table__body-sell">5000₽</td>
+              </tr>
+            </tbody>  
+          </table>
         </div>
       </div>
       <div class="profile">
@@ -1366,7 +1623,7 @@
       </span>
     </div>
   </div>
-  <div class="modal-overflow modal-open">
+  <div class="modal-overflow"> <!-- .modal-open - показывает модалку-->
     <div class="modal-entrance">
       <div class="modal-entrance__line"></div>
       <div class="modal-entrance__title">Вход</div>
@@ -1387,6 +1644,101 @@
       <span class="modal-entrance__recover">
         Забыли пароль? <a href="#" class="modal-entrance__recover-link"> Восстановить</a>
       </span>
+    </div>
+  </div>
+  <div class="modal-overflow"> <!-- .modal-open - показывает модалку-->
+    <div class="modal-money">
+      <div class="modal-money__line"></div>
+      <nav class="modal-money__nav">
+        <button class="modal-money__button-nav modal-money__button-nav--active">Пополнить</button>
+        <button class="modal-money__button-nav">Вывести</button>
+      </nav>
+      <div class="modal-money-content">
+        <form class="modal-money-form modal-money-form--open">
+          <div class="modal-money-form__block">
+            <div class="modal-money-form__title">Кошелек</div>
+            <div class="modal-money-form__wrapper">
+              <span class="modal-money-form__wrapper-title">Ваш баланс</span>
+              <input type="text" class="modal-money-form__input" placeholder="1200₽">
+            </div>
+            <div class="modal-money-form__wrapper">
+              <span class="modal-money-form__wrapper-title">Сумма пополнения</span>
+              <input type="text" class="modal-money-form__input" placeholder="200₽">
+            </div>
+          </div>
+          <div class="modal-money-form__block">
+            <div class="modal-money-form__title">Способы оплаты</div>
+            <div class="modal-money-form__wrap">
+              <button class="modal-money-form__payment">
+                <img src="image/visa.png" alt="Visa/MC" class="modal-money-form__icon">
+                <span class="modal-money-form__wrapper-name">Visa/MC</span>
+              </button>
+              <button class="modal-money-form__payment">
+                <img src="image/qiwi.png" alt="QIWI" class="modal-money-form__icon">
+                <span class="modal-money-form__wrapper-name">QIWI</span>
+              </button>
+              <button class="modal-money-form__payment">
+                <img src="image/free-kassa.png" alt="FKwallet" class="modal-money-form__icon">
+                <span class="modal-money-form__wrapper-name">FKwallet</span>
+              </button>
+              <button class="modal-money-form__payment modal-money-form__payment--active">
+                <img src="image/piestrix.png" alt="Piastrix" class="modal-money-form__icon">
+                <span class="modal-money-form__wrapper-name">Piastrix</span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-money-form__block">
+            <div class="modal-money-form__title">Пополнение</div>
+            <div class="modal-money-form__wrapper">
+              <span class="modal-money-form__wrapper-title">Сумма к пополнению</span>
+              <input type="text" class="modal-money-form__input" placeholder="190₽">
+            </div>
+          </div>
+          <button type="submit" class="modal-money-form__button">Пополнить</button>
+        </form>
+        <form class="modal-money-form">
+          <div class="modal-money-form__block">
+            <div class="modal-money-form__title">Кошелек</div>
+            <div class="modal-money-form__wrapper">
+              <span class="modal-money-form__wrapper-title">Ваш баланс</span>
+              <input type="text" class="modal-money-form__input" placeholder="1200₽">
+            </div>
+            <div class="modal-money-form__wrapper">
+              <span class="modal-money-form__wrapper-title">Сумма пополнения</span>
+              <input type="text" class="modal-money-form__input" placeholder="200₽">
+            </div>
+          </div>
+          <div class="modal-money-form__block">
+            <div class="modal-money-form__title">Метод вывода</div>
+            <div class="modal-money-form__wrap">
+              <button class="modal-money-form__payment">
+                <img src="image/visa.png" alt="Visa/MC" class="modal-money-form__icon modal-money-form__payment--active">
+                <span class="modal-money-form__wrapper-name">Visa/MC</span>
+              </button>
+              <button class="modal-money-form__payment">
+                <img src="image/qiwi.png" alt="QIWI" class="modal-money-form__icon">
+                <span class="modal-money-form__wrapper-name">QIWI</span>
+              </button>
+              <button class="modal-money-form__payment ">
+                <img src="image/piestrix.png" alt="Piastrix" class="modal-money-form__icon">
+                <span class="modal-money-form__wrapper-name">Piastrix</span>
+              </button>
+            </div>
+            <div class="modal-money-form__wrapper">
+              <span class="modal-money-form__wrapper-title">Введите номер карты</span>
+              <input type="text" class="modal-money-form__input" placeholder="**** **** **** ****">
+            </div>
+          </div>
+          <div class="modal-money-form__block">
+            <div class="modal-money-form__title">Вывод</div>
+            <div class="modal-money-form__wrapper">
+              <span class="modal-money-form__wrapper-title">Сумма к выводу</span>
+              <input type="text" class="modal-money-form__input" placeholder="190₽">
+            </div>
+          </div>
+          <button type="submit" class="modal-money-form__button">Пополнить</button>
+        </form>
+      </div>
     </div>
   </div>
 </body>

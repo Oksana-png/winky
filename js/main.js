@@ -76,6 +76,23 @@ const closeTelegram = () => {
   document.querySelector('.telegram').classList.remove('modal-open');
 };
 
+const openModalMoney = (elem) => {
+  const buttonsMoney = document.querySelectorAll('.modal-money__button-nav');
+  const contents = document.querySelectorAll('.modal-money-form');
+
+  buttonsMoney.forEach((item, i) => {
+
+    
+    if (item !== elem) {
+      item.classList.remove('modal-money__button-nav--active');
+      contents[i].classList.remove('modal-money-form--open');
+    } else {
+      item.classList.add('modal-money__button-nav--active');
+      contents[i].classList.add('modal-money-form--open');
+    }
+  });
+};
+
 buttonOpenMenu.addEventListener('click', openMenu);
 buttonOpenAccount.addEventListener('click', openMenuAccount);
 
@@ -92,8 +109,26 @@ document.addEventListener('click', (e) => {
    closeTelegram();
  } else if (target.closest('.chat')) {
    openTelegram();
+ } else if (target.closest('.modal-money__button-nav')) {
+   if (target.closest('.modal-money__button-nav').classList.contains('modal-money__button-nav--active')) {
+     return;
+   }
+   openModalMoney(target.closest('.modal-money__button-nav'));
  }
 });
+
+document.querySelector('.dice-field__input').addEventListener('input', function () {
+  document.querySelector('style').remove();
+
+  const th = document.querySelector('.dice-field__input');
+  let val = (th.value - th.getAttribute('min')) / (th.getAttribute('max') - th.getAttribute('min'));
+  let st = document.createElement('style');
+  
+  st.innerHTML = `.dice-field__input[type='range']::-webkit-slider-runnable-track {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #94A14E), color-stop(${val}, #FF6166));}`;
+
+  document.body.prepend(st);
+})
+
 
 chatMessage.addEventListener('scroll', () => {
   const blurEffect = document.querySelector('.blur');

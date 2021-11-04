@@ -489,3 +489,115 @@
       width: 47px
   &-open
     display: flex
+  &-money
+    padding: 20px 26px
+    width: 257px
+    background: #131D3F
+    border-radius: 11px
+    height: 450px
+    &__line
+      display: none
+      background: #2E3D72
+      border-radius: 13px
+      width: 47px
+      height: 9px
+      margin: 0 auto
+      margin-bottom: 10px
+    &__button
+      &-nav
+        padding: 6px
+        padding-top: 0
+        border: none
+        border-bottom: 1px solid rgba(10, 196, 255, 0.15)
+        background-color: transparent
+        font-weight: 500
+        font-size: 12.1818px
+        line-height: 15px
+        color: #FFFFFF
+        min-width: 87px
+        &--active
+          border-bottom: 1px solid #0AC4FF
+    &__nav
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 33px
+    &-form
+      display: none
+      &--open
+        display: block
+      &__title
+        font-weight: bold
+        font-size: 11px
+        line-height: 14px
+        color: #FFFFFF
+        margin-bottom: 8px
+      &__block
+        margin-bottom: 23px
+      &__icon
+        width: 13px
+        height: 13px
+        object-fit: cover
+        margin-right: 5px
+      &__wrap
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 4px
+        margin-bottom: 6px
+        & .modal-money
+          &-form
+            &__wrap
+              gap: 4px
+      &__payment
+        border: none
+        display: flex
+        align-items: center
+        padding: 6.5px 10px
+        font-weight: 500
+        font-size: 8px
+        line-height: 10px
+        color: #FFFFFF
+        padding: 7px
+        min-width: 65px
+        background: #080F29
+        border-radius: 3.96667px
+        &--active
+          background: linear-gradient(180deg, rgba(24, 52, 158, 0.6) 0%, rgba(21, 48, 149, 0.6) 100%)
+      &__wrapper
+        background: #080F29
+        border-radius: 3.96667px
+        padding: 6.5px 10px
+        margin-bottom: 5px
+        display: flex
+        flex-direction: column
+        &-title
+          font-weight: 500
+          font-size: 7px
+          line-height: 9px
+          color: rgba(255, 255, 255, 0.5)
+          margin-bottom: 5px
+      &__button
+        padding: 12px
+        font-weight: 500
+        font-size: 9.56182px
+        line-height: 12px
+        text-align: center
+        color: #FFFFFF
+        background: #1973F4
+        border: none
+        width: 100%
+        border-radius: 7px
+      &__input
+        font-weight: bold
+        font-size: 7.36667px
+        line-height: 9px
+        color: #FFFFFF
+        background-color: transparent
+        border: none
+        &::placeholder, &:focus
+          font-weight: bold
+          font-size: 7.36667px
+          line-height: 9px
+          color: #FFFFFF
+          outline: none
