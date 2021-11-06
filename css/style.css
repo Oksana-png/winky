@@ -3495,13 +3495,54 @@ h2, h3, h4, h5, h6 {
 }
 
 .dice {
+  width: 76%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 37px;
+  gap: 31px;
   margin-right: 10px;
+}
+
+.dice-win {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 81px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.dice-win--right {
+  color: #FF4343;
+}
+
+.dice-win--left {
+  color: #179F3D;
+}
+
+.dice-field {
+  width: 66%;
+}
+
+.dice-field__info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dice-field__info-image {
+  padding: 56px 0;
 }
 
 .dice-field__bet {
@@ -3545,9 +3586,26 @@ h2, h3, h4, h5, h6 {
 }
 
 .dice-field__container {
+  position: relative;
   background: #0A1633;
   border-radius: 9px;
   padding: 7px;
+}
+
+.dice-field__indicator {
+  position: absolute;
+  width: 14px;
+  height: 23px;
+  bottom: 22px;
+  z-index: 10;
+}
+
+.dice-field__indicator--left {
+  margin-left: 44px;
+}
+
+.dice-field__indicator--right {
+  margin-left: 292px;
 }
 
 .dice-field__input {
@@ -3566,50 +3624,29 @@ h2, h3, h4, h5, h6 {
   height: 18px;
   width: 28px;
   border-radius: 5px;
-  background: #017EF0;
+  background-color: #017EF0;
+  background-image: url(../image/line-three.png);
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -7px;
 }
 
-.dice-field__input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  animate: 0.2s;
-  -webkit-box-shadow: 0px 0px 0px #50555C;
-          box-shadow: 0px 0px 0px #50555C;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166));
-  border-radius: 3px;
-  border: 0px solid #FF6166;
-}
-
-.dice-field__input[type=range]:focus::-webkit-slider-runnable-track {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166));
-}
-
-.dice-field__input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 0px 0px 0px #50555C;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166));
-  border-radius: 3px;
-  border: 0px solid #080F29;
-}
-
-.dice-field__input[type=range]::-moz-range-thumb {
+.dice-field__input[type='range']::-moz-range-thumb {
   box-shadow: 0px 0px 0px #000000;
   border: 0px solid #000000;
   height: 18px;
   width: 28px;
   border-radius: 5px;
-  background: #017EF0;
+  background-color: #017EF0;
+  background-image: url(../image/line-three.png);
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
-.dice-field__input[type=range]::-ms-track {
+.dice-field__input[type='range']::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -3619,37 +3656,68 @@ h2, h3, h4, h5, h6 {
   color: transparent;
 }
 
-.dice-field__input[type=range]::-ms-fill-lower {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166));
-  border: 0px solid #080F29;
-  border-radius: 6px;
-  box-shadow: 0px 0px 0px #50555C;
-}
-
-.dice-field__input[type=range]::-ms-fill-upper {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166));
-  border: 0px solid #080F29;
-  border-radius: 6px;
-  box-shadow: 0px 0px 0px #50555C;
-}
-
-.dice-field__input[type=range]::-ms-thumb {
+.dice-field__input[type='range']::-ms-thumb {
   margin-top: 1px;
   box-shadow: 0px 0px 0px #000000;
   border: 0px solid #000000;
   height: 18px;
   width: 28px;
   border-radius: 5px;
-  background: #017EF0;
+  background-color: #017EF0;
+  background-color: #017EF0;
+  background-image: url(../image/line-three.png);
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
-.dice-field__input[type=range]:focus::-ms-fill-lower {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166));
+.dice-field__input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  -webkit-box-shadow: 0px 0px 0px #50555C;
+          box-shadow: 0px 0px 0px #50555C;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
+  border-radius: 3px;
+  border: 0px solid #FF6166;
 }
 
-.dice-field__input[type=range]:focus::-ms-fill-upper {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, #179F3D), color-stop(0.15, #FF6166));
+.dice-field__input[type='range']:focus::-webkit-slider-runnable-track {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
+}
+
+.dice-field__input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #50555C;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
+  border-radius: 3px;
+  border: 0px solid #080F29;
+}
+
+.dice-field__input[type='range']::-ms-fill-lower {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
+  border: 0px solid #080F29;
+  border-radius: 6px;
+  box-shadow: 0px 0px 0px #50555C;
+}
+
+.dice-field__input[type='range']::-ms-fill-upper {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
+  border: 0px solid #080F29;
+  border-radius: 6px;
+  box-shadow: 0px 0px 0px #50555C;
+}
+
+.dice-field__input[type='range']:focus::-ms-fill-lower {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
+}
+
+.dice-field__input[type='range']:focus::-ms-fill-upper {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
 }
 
 @media (min-width: 1500px) {
@@ -3795,6 +3863,28 @@ h2, h3, h4, h5, h6 {
   .wheel-bonus .bet-bonus {
     height: 100%;
   }
+  .dice-field {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dice-field__field {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 32px;
+  }
+  .dice-field__info-image {
+    padding-top: 30px;
+  }
 }
 
 @media (max-width: 1270px) {
@@ -3812,7 +3902,7 @@ h2, h3, h4, h5, h6 {
     -ms-grid-columns: (minmax(259px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
   }
-  .coin, .mine, .play-wheel {
+  .coin, .mine, .play-wheel, .dice {
     width: 70%;
   }
   .swiper {
@@ -3995,6 +4085,12 @@ h2, h3, h4, h5, h6 {
   .wheel-bonus-field__cubes {
     max-width: 315px;
   }
+  .dice {
+    width: 65%;
+  }
+  .dice-field__block {
+    min-width: 138px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -4094,6 +4190,10 @@ h2, h3, h4, h5, h6 {
   }
   .wheel-bonus {
     width: 100%;
+  }
+  .dice {
+    width: 100%;
+    margin-right: 0;
   }
 }
 
@@ -5008,6 +5108,64 @@ h2, h3, h4, h5, h6 {
   .modal-money-form__input:focus {
     font-size: 12.3156px;
     line-height: 15px;
+  }
+  .dice {
+    gap: 20px;
+  }
+  .dice-field__info-image {
+    width: 57px;
+    padding-top: 0;
+    margin-top: -15px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-bottom: 90px;
+  }
+  .dice-field__title {
+    font-size: 10.0957px;
+    line-height: 13px;
+    margin-bottom: 8px;
+  }
+  .dice-field__data {
+    font-size: 8.41312px;
+    line-height: 11px;
+    padding: 5px 11px;
+  }
+  .dice-field__bet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    background-color: transparent;
+    top: 490px;
+    width: 140px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  .dice-field__block {
+    width: 140px;
+    margin-bottom: 14px;
+  }
+  .dice-field__block:not(:last-child) {
+    margin-right: 0;
+  }
+  .dice-field__container {
+    padding: 4px;
+  }
+  .dice-field__input {
+    padding: 0 5px;
+  }
+  .dice-win {
+    font-weight: bold;
+    font-size: 35.3821px;
+    line-height: 45px;
+  }
+  .dice .bet {
+    height: 401px;
   }
 }
 /*# sourceMappingURL=style.css.map */

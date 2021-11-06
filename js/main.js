@@ -124,7 +124,14 @@ document.querySelector('.dice-field__input').addEventListener('input', function 
   let val = (th.value - th.getAttribute('min')) / (th.getAttribute('max') - th.getAttribute('min'));
   let st = document.createElement('style');
   
-  st.innerHTML = `.dice-field__input[type='range']::-webkit-slider-runnable-track {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #94A14E), color-stop(${val}, #FF6166));}`;
+  st.innerHTML = `.dice-field__input[type='range']::-webkit-slider-runnable-track {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #179F3D), color-stop(${val}, #FF6166));}
+                  .dice-field__input[type='range']:focus::-webkit-slider-runnable-track {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #179F3D), color-stop(${val}, #FF6166));}
+                  .dice-field__input[type='range']::-moz-range-track {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #179F3D), color-stop(${val}, #FF6166));}
+                  .dice-field__input[type='range']::-ms-fill-lower {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #179F3D), color-stop(${val}, #FF6166));}
+                  .dice-field__input[type='range']::-ms-fill-upper {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #179F3D), color-stop(${val}, #FF6166));}
+                  .dice-field__input[type='range']:focus::-ms-fill-lower {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #179F3D), color-stop(${val}, #FF6166));}
+                  .dice-field__input[type='range']:focus::-ms-fill-upper {background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, #179F3D), color-stop(${val}, #FF6166));}
+  `;
 
   document.body.prepend(st);
 })

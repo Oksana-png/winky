@@ -14,7 +14,7 @@
 <body>
   <style>
     .dice-field__input::-webkit-slider-runnable-track {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(0.95, #94A14E), color-stop(0.95, #C5C5C5));
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(0.20, #179F3D), color-stop(0.20, #FF6166));
     }
   </style>
   <header class="header">
@@ -1001,7 +1001,18 @@
             </div>
           </div>
           <div class="dice-field__field">
+            <div class="dice-field__info">
+              <img src="image/cubes-dice.svg" alt="cubes" class="dice-field__info-image">
+              <div class="dice-win dice-win--left">23.21</div>
+              <div class="dice-win dice-win--right">23.21</div>
+            </div>
             <div class="dice-field__container">
+              <svg class="dice-field__indicator dice-field__indicator--left">
+                <use xlink:href="image/svg.svg#right-indicator"></use>
+              </svg>
+              <svg class="dice-field__indicator dice-field__indicator--right">
+                <use xlink:href="image/svg.svg#left-indicator "></use>
+              </svg>
               <input type="range" class="dice-field__input" step="1" min="0" max="100" value="20">
             </div>
           </div>

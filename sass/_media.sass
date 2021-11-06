@@ -89,6 +89,18 @@
       height: 210px
       &-bonus
         height: 100%
+  .dice
+    &-field
+      order: -1
+      width: 100%
+      display: flex
+      flex-direction: column
+      &__field
+        order: -1
+        margin-bottom: 32px
+      &__info
+        &-image
+          padding-top: 30px
 @media (max-width: 1270px)
   .container
     width: 92%
@@ -100,7 +112,7 @@
     &-play
       &__wrapper
         grid-template-columns: repeat(auto-fit, minmax(259px, 1fr))
-  .coin, .mine, .play-wheel
+  .coin, .mine, .play-wheel, .dice
     width: 70%
   .swiper
     height: 342px
@@ -234,7 +246,11 @@
         height: 39px
       &__cubes
         max-width: 315px
-
+  .dice
+    width: 65%
+    &-field
+      &__block
+        min-width: 138px
 @media (max-width: 1024px)
   .main
     &-container
@@ -304,6 +320,9 @@
       gap: 20px
   .wheel-bonus
     width: 100%
+  .dice
+    width: 100%
+    margin-right: 0
 @media (max-width: 768px)
   body
     display: block
@@ -997,3 +1016,45 @@
           &:focus
             font-size: 12.3156px
             line-height: 15px
+  .dice
+    gap: 20px
+    &-field
+      &__info
+        &-image
+          width: 57px
+          padding-top: 0
+          margin-top: -15px
+          object-fit: cover
+          padding-bottom: 90px
+      &__title
+        font-size: 10.0957px
+        line-height: 13px
+        margin-bottom: 8px
+      &__data
+        font-size: 8.41312px
+        line-height: 11px
+        padding: 5px 11px
+      &__bet
+        display: flex
+        flex-direction: column
+        position: absolute
+        background-color: transparent
+        top: 490px
+        width: 140px
+        right: 50%
+        transform: translateX(50%)
+      &__block
+        width: 140px
+        margin-bottom: 14px
+        &:not(:last-child)
+          margin-right: 0
+      &__container
+        padding: 4px
+      &__input
+        padding: 0 5px
+    &-win
+      font-weight: bold
+      font-size: 35.3821px
+      line-height: 45px
+    & .bet
+      height: 401px
