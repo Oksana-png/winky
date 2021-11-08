@@ -68,8 +68,10 @@
   .play-wheel
     width: 72%
     margin-right: 10px
+    gap: 20px
     &-field
       order: -1
+      width: 100%
   .bet
     width: 100%
     &-table
@@ -1058,3 +1060,17 @@
       line-height: 45px
     & .bet
       height: 401px
+  .play-wheel
+    &-field
+      padding-top: 33px
+      max-height: 400px
+      overflow: hidden
+    & .wheel
+      &::after
+        width: 270px
+        height: 270px
+  .wheel-spiner
+    width: 340px
+    height: 340px
+  .ticker
+    top: -7px

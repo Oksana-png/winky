@@ -1914,7 +1914,7 @@ h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-size: 19.1236px;
   line-height: 24px;
-  color: #FFFFF;
+  color: #FFFFFF;
   margin-bottom: 25px;
 }
 
@@ -3480,7 +3480,12 @@ h2, h3, h4, h5, h6 {
 }
 
 .play-wheel {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 76%;
@@ -3494,11 +3499,48 @@ h2, h3, h4, h5, h6 {
   margin-bottom: 48px;
 }
 
-.dice {
-  width: 76%;
+.play-wheel-field {
+  width: 66%;
+  max-height: 330px;
+}
+
+.play-wheel .wheel {
+  background-color: transparent;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+
+.play-wheel .wheel::after {
+  position: absolute;
+  content: '';
+  background-color: #000C26;
+  width: 216px;
+  height: 216px;
+  z-index: 10;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1.39953px solid #29337B;
+}
+
+.ticker {
+  position: absolute;
+  top: 18px;
+}
+
+.dice {
+  width: 76%;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 31px;
@@ -3720,6 +3762,16 @@ h2, h3, h4, h5, h6 {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166));
 }
 
+.wheel-spiner {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  border: 1.39953px solid #29337B;
+  -webkit-transition: 5s ease-out transform;
+  transition: 5s ease-out transform;
+}
+
 @media (min-width: 1500px) {
   .container {
     max-width: 95%;
@@ -3827,11 +3879,13 @@ h2, h3, h4, h5, h6 {
   .play-wheel {
     width: 72%;
     margin-right: 10px;
+    gap: 20px;
   }
   .play-wheel-field {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    width: 100%;
   }
   .bet {
     width: 100%;
@@ -5166,6 +5220,22 @@ h2, h3, h4, h5, h6 {
   }
   .dice .bet {
     height: 401px;
+  }
+  .play-wheel-field {
+    padding-top: 33px;
+    max-height: 400px;
+    overflow: hidden;
+  }
+  .play-wheel .wheel::after {
+    width: 270px;
+    height: 270px;
+  }
+  .wheel-spiner {
+    width: 340px;
+    height: 340px;
+  }
+  .ticker {
+    top: -7px;
   }
 }
 /*# sourceMappingURL=style.css.map */

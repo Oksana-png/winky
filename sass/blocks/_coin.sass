@@ -525,16 +525,42 @@
     &__inactive
       opacity: 0.4
 .play-wheel
-  display: none //flex
+  display: flex //flex
+  align-items: flex-start
   flex-wrap: wrap
   width: 76%
   & .bet
     max-height: 300px
     &-money
       margin-bottom: 48px
+  &-field
+    width: 66%
+    max-height: 330px
+  & .wheel
+    background-color: transparent
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 0
+    &::after
+      position: absolute
+      content: ''
+      background-color: #000C26
+      width: 216px
+      height: 216px
+      z-index: 10
+      top: 50%
+      transform: translateY(-50%)
+      border-radius: 50%
+      border: 1.39953px solid #29337B
+.ticker
+  position: absolute
+  top: 18px
+
 .dice
   width: 76%
-  display: flex
+  display: none //flex
   flex-wrap: wrap
   gap: 31px
   margin-right: 10px
@@ -687,3 +713,10 @@
         background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166))
       &[type='range']:focus::-ms-fill-upper
         background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, #179F3D), color-stop(0.2, #FF6166))
+.wheel-spiner
+  position: relative
+  width: 270px
+  height: 270px
+  border-radius: 50%
+  border: 1.39953px solid #29337B
+  transition: 5s ease-out transform

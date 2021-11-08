@@ -162,3 +162,229 @@ const swiper = new Swiper('.swiper', {
 });
 
 showNotification('1500$');
+
+const sectors = [
+  
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', //синий
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', // СИНИЙ
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый 
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', // СИНИЙ
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый 
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', //синий 
+  },
+  {
+    color: '#E2E706', //желтый
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', //синий 
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', //синий 
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', //синий 
+  },
+  {
+    color: '#E2E706', //желтый
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый 
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', //синий
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый 
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#000C26', //темный
+  },
+  {
+    color: '#2D55E1', //синий  //
+  },
+  {
+    color: '#000C26', //темный //
+  },
+  {
+    color: '#329005', //зеленый
+  },
+  {
+    color: '#DE564D', //красный
+  },
+];
+
+var results = [
+  {name: "Удовлетворён", count: 1, color: "lightblue"},
+  {name: "Нейтральное", count: 1, color: "lightgreen"},
+  {name: "Не удовлетворён", count: 1, color: "pink"},
+  {name: "Без комментариев", count: 1, color: "silver"}
+];
+const wheel = document.querySelector('.wheel-spiner');
+const ctx = wheel.getContext('2d');
+const deg = 360 / sectors.length;
+
+
+
+
+
+var total = sectors.reduce(function(sum, choice) {
+  
+  return sum + 1; //choice.count
+}, 0);
+
+// Start at the top
+var currentAngle = -0.5 * Math.PI;
+sectors.forEach(function(result) {
+  var sliceAngle = (1 / total) * 2 * Math.PI;
+  ctx.beginPath();
+  // center=100,100, radius=100
+  // from current angle, clockwise by slice's angle
+  ctx.arc(135, 135, 135,
+         currentAngle, currentAngle + sliceAngle);
+  currentAngle += sliceAngle;
+  ctx.lineTo(135, 135);
+  ctx.fillStyle = result.color;
+  ctx.fill();
+});
+
+
+
+const rotateWheel = (sector) => {
+  sector = sector - 1;
+  let plus = 0;
+  const turnovers = Math.floor(Math.random() * 2 + 2) * 360;
+  
+  let degs = parseInt(wheel.style.transform.replace(/[^0-9]/g, '')) ? parseInt(wheel.style.transform.replace(/[^0-9]/g, '')) : 0; // старое значение угла
+  let start = degs + turnovers;
+
+
+  let sectorDeg = sector * deg;
+  if (start % 360 !== 0) {
+
+    if (start % 360 > sectorDeg) {
+      console.log(sectorDeg);
+      plus = (360 - start % 360) + sectorDeg;
+      
+      wheel.style.transform = `rotate(${Math.floor(start + plus)}deg)`;
+
+      return;
+    } else {
+      plus = start % 360 - sectorDeg;
+      
+      wheel.style.transform = `rotate(${Math.floor(start + plus)}deg)`;
+      return;
+    }
+    
+  }
+
+  wheel.style.transform = `rotate(${Math.floor(start + sectorDeg)}deg)`;
+  
+};
+
+rotateWheel(34);
+
+setTimeout(() => { rotateWheel(16) }, 6000)
